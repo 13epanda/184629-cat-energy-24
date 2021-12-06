@@ -19,18 +19,18 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a>
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--active">
                 Главная
               </a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">
+              <a class="site-list__link" href="catalog.html">
                 Каталог продукции
               </a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">
+              <a class="site-list__link" href="form.html">
                 Подбор программы
               </a>
             </li>
@@ -43,10 +43,12 @@
         <div class="promo__wrapper">
           <h1 class="promo__title">Функциональное питание для котов</h1>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
+          <img class="promo__img" src="img/mobile/index-can-mobile.png" width="280" height="270" alt="Cat Energy Pro: Курица">
           <a class="button promo__button" href="form.html">Подобрать программу</a>
         </div>
+        <div class="promo__bg"></div>
       </header>
-      <section class="program page-container">
+      <section class="program">
         <h2 class="visually-hidden">Программы</h2>
         <ul class="program__list">
           <li class="program__item">
@@ -61,7 +63,7 @@
           </li>
         </ul>
       </section>
-      <section class="usage page-container">
+      <section class="usage">
         <h2 class="usage__title">Как это работает</h2>
         <ul class="usage__list">
           <li class="usage__item usage__item--useful">
@@ -83,21 +85,24 @@
         </ul>
       </section>
       <section class="example">
-        <div class="example__wrapper page-container">
+        <div class="example__wrapper">
           <h2 class="example__title">Живой пример</h2>
-          <p class="example__description"></p>
+          <p class="example__description">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
           <dl class="example__list">
             <div class="example__item">
-              <dt>5 кг</dt>
-              <dd>Снижение веса</dd>
+              <dt class="example__term">5 кг</dt>
+              <dd class="example__desc">Снижение веса</dd>
             </div>
             <div class="example__item">
-              <dt>60 дней</dt>
-              <dd>Затрачено времени</dd>
+              <dt class="example__term">60 дней</dt>
+              <dd class="example__desc">Затрачено времени</dd>
             </div>
             <div class="example__item--price">
-              <dt>Затраты на питание:</dt>
-              <dd>15 000 руб.</dd>
+              <dt class="example__term--price">Затраты на питание:</dt>
+              <dd class="example__desc--price">15 000 руб.</dd>
             </div>
           </dl>
           <div class="example__slider">
@@ -110,10 +115,10 @@
               </li>
             </ol>
             <div class="example__condition">
-              <span class="condition__after">Было</span>
-              <input class="condition__range" type="range" id="condition" name="condition" min="0" max="100" value="70" step="10">
+              <span class="example__after">Было</span>
+              <input class="example__range" type="range" id="condition" name="condition" min="0" max="100" value="70" step="10">
               <label class="visually-hidden" for="condition">Изменить состояние кота.</label>
-              <span class="condition__before">Стало</span>
+              <span class="example__before">Стало</span>
             </div>
           </div>
         </div>
