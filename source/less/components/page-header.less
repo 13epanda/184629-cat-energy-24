@@ -1,11 +1,12 @@
 .page-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 17px 20px 10px;
-}
 
-.main-nav {
-  position: relative;
+  &__wrapper-nav {
+    position: relative;
+  }
 
   &__toggle {
     width: 24px;
@@ -17,24 +18,24 @@
     border: none;
   }
 
-  .main-nav__wrapper {
+  &__nav {
     display: none;
   }
 
-  .site-list {
+  &__list {
     padding-left: 0;
     list-style-type: none;
+  }
 
-    &__item {
-      list-style-type: none;
-    }
+  &__item {
+    list-style-type: none;
+  }
 
-    &__link {
-      font-family: "Oswald", sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 20px;
-    }
+  &__link {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
