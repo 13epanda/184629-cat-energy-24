@@ -34,8 +34,8 @@
     </header>
     <main class="page-catalog">
       <h1 class="page-catalog__title">Каталог продукции</h1>
-      <section class="catalog">
-        <h2 class="page_catalog__subtitle visually-hidden">Основные товары</h2>
+      <section class="page-catalog__catalog catalog">
+        <h2 class="catalog__title visually-hidden">Основные товары</h2>
         <ul class="catalog__list">
           <li class="catalog__item">
             <h3 class="catalog__product">Cat Energy<br>PRO 500 г</h3>
@@ -177,8 +177,8 @@
           </li>
         </ul>
       </section>
-      <section class="catalog-extra">
-        <h2 class="page_catalog__subtitle">Дополнительные товары</h2>
+      <section class="page-catalog__catalog-extra catalog-extra">
+        <h2 class="catalog-extra__title">Дополнительные товары</h2>
         <ul class="catalog-extra__list">
           <li class="catalog-extra__item">
             <h3 class="catalog-extra__product">Сахарозаменитель</h3>
@@ -186,7 +186,7 @@
               <dt class="catalog-extra__term">1 упаковка (100 г)</dt>
               <dd class="catalog-extra__desc">200 Р.</dd>
             </dl>
-            <button class="catalog__order button button-primary" type="button">Заказать</button>
+            <button class="catalog-extra__order button button-primary" type="button">Заказать</button>
           </li>
           <li class="catalog-extra__item">
             <h3 class="catalog-extra__product">Питьевая вода</h3>
@@ -194,7 +194,7 @@
               <dt>5 литров</dt>
               <dd>50 Р.</dd>
             </dl>
-            <button class="catalog__order button button-primary" type="button">Заказать</button>
+            <button class="catalog-extra__order button button-primary" type="button">Заказать</button>
           </li>
           <li class="catalog-extra__item">
             <h3 class="catalog-extra__product">Молоко</h3>
@@ -202,7 +202,7 @@
               <dt>1 литр</dt>
               <dd>100 Р.</dd>
             </dl>
-            <button class="catalog__order button button-primary" type="button">Заказать</button>
+            <button class="catalog-extra__order button button-primary" type="button">Заказать</button>
           </li>
           <li class="catalog-extra__item">
             <h3 class="catalog-extra__product">Витамины</h3>
@@ -210,12 +210,10 @@
               <dt>1 упаковка (30 г)</dt>
               <dd>300 Р.</dd>
             </dl>
-            <button class="catalog__order button button-primary" type="button">Заказать</button>
+            <button class="catalog-extra__order button button-primary" type="button">Заказать</button>
           </li>
         </ul>
-        <div class="catalog-extra__promo">
-          <p>Закажите все и получите чехол для кота в подарок!</p>
-        </div>
+        <p class="catalog-extra__promo">Закажите все и получите чехол для кота в подарок!</p>
       </section>
     </main>
     <footer class="page-footer">
