@@ -3,38 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header page-container">
-      <a class="page-header__logo">
-        <img src="img/mobile/logo.png" width="34" height="38" alt="Логотип магазина.">
-      </a>
-      <a class="page-header__logo-title">
-        <img src="img/cat-energy.png" width="101" height="18" alt="Cat energy.">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню.</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a>Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main class="page-catalog">
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img src="img/mobile/logo.png" width="34" height="38" alt="Логотип магазина.">
+    </a>
+    <a class="page-header__logo-title">
+      <img src="img/cat-energy.png" width="101" height="18" alt="Cat energy.">
+    </a>
+    <nav class="page-header__wrapper-nav">
+      <button class="page-header__toggle" type="button">
+        <span class="visually-hidden">Открыть меню.</span>
+      </button>
+      <div class="page-header__nav">
+        <ul class="page-header__list">
+          <li class="page-header__item">
+            <a class="page-header__link" href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link page-header__link--active">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="form.html">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="page-catalog">
       <h1 class="page-catalog__title">Каталог продукции</h1>
-      <section class="catalog">
-        <h2 class="page_catalog__subtitle visually-hidden">Основные товары</h2>
+      <section class="page-catalog__catalog catalog">
+        <h2 class="catalog__title visually-hidden">Основные товары</h2>
         <ul class="catalog__list">
           <li class="catalog__item">
             <h3 class="catalog__product">Cat Energy<br>PRO 500 г</h3>
@@ -53,7 +60,7 @@
                 <dd>700 Р.</dd>
               </div>
             </dl>
-            <button class="catalog__order" type="button">Заказать</button>
+            <button class="catalog__order button button-primary" type="button">Заказать</button>
           </li>
           <li class="catalog__item">
             <h3 class="catalog__product">Cat Energy <br>PRO 1000 г</h3>
@@ -72,7 +79,7 @@
                 <dd>1000 Р.</dd>
               </div>
             </dl>
-            <button class="catalog__order" type="button">Заказать</button>
+            <button class="catalog__order button button-primary" type="button">Заказать</button>
           </li>
           <li class="catalog__item">
             <h3 class="catalog__product">Cat Energy <br>PRO 500 г</h3>
@@ -91,7 +98,7 @@
                 <dd>700 Р.</dd>
               </div>
             </dl>
-            <button class="catalog__order" type="button">Заказать</button>
+            <button class="catalog__order button button-primary" type="button">Заказать</button>
           </li>
           <li class="catalog__item">
             <h3 class="catalog__product">Cat Energy <br>PRO 1000 г</h3>
@@ -110,7 +117,7 @@
                 <dd>1000 Р.</dd>
               </div>
             </dl>
-            <button class="catalog__order" type="button">Заказать</button>
+            <button class="catalog__order button button-primary" type="button">Заказать</button>
           </li>
           <li class="catalog__item">
             <h3 class="catalog__product">Cat Energy <br>slim 500 г</h3>
@@ -129,7 +136,7 @@
                 <dd>400 Р.</dd>
               </div>
             </dl>
-            <button class="catalog__order" type="button">Заказать</button>
+            <button class="catalog__order button button-primary" type="button">Заказать</button>
           </li>
           <li class="catalog__item">
             <h3 class="catalog__product">Cat Energy <br>slim 1000 г</h3>
@@ -148,7 +155,7 @@
                 <dd>700 Р.</dd>
               </div>
             </dl>
-            <button class="catalog__order" type="button">Заказать</button>
+            <button class="catalog__order button button-primary" type="button">Заказать</button>
           </li>
           <li class="catalog__item">
             <h3 class="catalog__product">Cat Energy <br>slim 500 г</h3>
@@ -167,25 +174,25 @@
                 <dd>700 Р.</dd>
               </div>
             </dl>
-            <button class="catalog__order" type="button">Заказать</button>
+            <button class="catalog__order button button-primary" type="button">Заказать</button>
           </li>
           <li class="catalog__item--more">
             <p class="catalog__more">Показать еще 100500 товаров</p>
-            <span>На самом деле вкусов гораздо больше!</span>
-            <a class="catalog__show-more button-primary button-second" href="#">Показать все</a>
+            <span class="catalog__bigger">На самом деле вкусов гораздо больше!</span>
+            <a class="catalog__show-more button button-second" href="#">Показать все</a>
           </li>
         </ul>
       </section>
-      <section class="catalog-extra">
-        <h2 class="page_catalog__subtitle">Дополнительные товары</h2>
+      <section class="page-catalog__catalog-extra catalog-extra">
+        <h2 class="catalog-extra__title">Дополнительные товары</h2>
         <ul class="catalog-extra__list">
           <li class="catalog-extra__item">
             <h3 class="catalog-extra__product">Сахарозаменитель</h3>
             <dl class="catalog-extra__parameters">
-              <dt>1 упаковка (100 г)</dt>
-              <dd>200 Р.</dd>
+              <dt class="catalog-extra__term">1 упаковка (100 г)</dt>
+              <dd class="catalog-extra__desc">200 Р.</dd>
             </dl>
-            <button class="catalog__order" type="button">Заказать</button>
+            <button class="catalog-extra__order button button-primary" type="button">Заказать</button>
           </li>
           <li class="catalog-extra__item">
             <h3 class="catalog-extra__product">Питьевая вода</h3>
@@ -193,7 +200,7 @@
               <dt>5 литров</dt>
               <dd>50 Р.</dd>
             </dl>
-            <button class="catalog__order" type="button">Заказать</button>
+            <button class="catalog-extra__order button button-primary" type="button">Заказать</button>
           </li>
           <li class="catalog-extra__item">
             <h3 class="catalog-extra__product">Молоко</h3>
@@ -201,7 +208,7 @@
               <dt>1 литр</dt>
               <dd>100 Р.</dd>
             </dl>
-            <button class="catalog__order" type="button">Заказать</button>
+            <button class="catalog-extra__order button button-primary" type="button">Заказать</button>
           </li>
           <li class="catalog-extra__item">
             <h3 class="catalog-extra__product">Витамины</h3>
@@ -209,16 +216,14 @@
               <dt>1 упаковка (30 г)</dt>
               <dd>300 Р.</dd>
             </dl>
-            <button class="catalog__order" type="button">Заказать</button>
+            <button class="catalog-extra__order button button-primary" type="button">Заказать</button>
           </li>
         </ul>
-        <div class="catalog-extra__promo">
-          <p>Закажите все и получите чехол для кота в подарок!</p>
-        </div>
+        <p class="catalog-extra__promo">Закажите все и получите чехол для кота в подарок!</p>
       </section>
     </main>
     <footer class="page-footer">
-      <section class="contacts">
+      <section class="page-footer__contacts contacts">
         <h2 class="visually-hidden">Наш адрес</h2>
         <div class="contacts__content">
           <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
@@ -230,25 +235,25 @@
         <a class="page-footer__logo-title">
           <img src="img/cat-energy.png" width="101" height="18" alt="Cat energy.">
         </a>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+        <ul class="page-footer__social">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--vkontakte" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте</span>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--instagram" href="https://www.instagram.com/htmlacademy">
               <span class="visually-hidden">Мы в Инстаграме</span>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--facebook" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Мы в Фейсбуке</span>
             </a>
           </li>
         </ul>
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <div class="page-footer__copyright">
+          <a class="page-footer__link--academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </div>
       </section>
     </footer>

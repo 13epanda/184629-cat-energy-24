@@ -3,33 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header page-container">
+    <header class="page-header">
       <a class="page-header__logo">
         <img src="img/mobile/logo.png" width="34" height="38" alt="Логотип магазина.">
       </a>
       <a class="page-header__logo-title">
         <img src="img/cat-energy.png" width="101" height="18" alt="Cat energy.">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+      <nav class="page-header__wrapper-nav">
+        <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a>
+        <div class="page-header__nav">
+          <ul class="page-header__list">
+            <li class="page-header__item">
+              <a class="page-header__link page-header__link--active">
                 Главная
               </a>
             </li>
-            <li class="site-list__item">
-              <a href="catalog.html">
+            <li class="page-header__item">
+              <a class="page-header__link" href="catalog.html">
                 Каталог продукции
               </a>
             </li>
-            <li class="site-list__item">
-              <a href="form.html">
+            <li class="page-header__item">
+              <a class="page-header__link" href="form.html">
                 Подбор программы
               </a>
             </li>
@@ -38,14 +39,16 @@
       </nav>
     </header>
     <main class="page-main">
-      <header class="main-header page-container">
-        <div class="main-header__wrapper">
-          <h1 class="main-header__title">Функциональное питание для котов</h1>
-          <p class="main-header__slogan">Занялся собой? Займись котом!</p>
-          <a class="button main-header__button" href="form.html">Подобрать программу</a>
+      <header class="page-main__promo promo">
+        <div class="promo__wrapper">
+          <h1 class="promo__title">Функциональное питание для котов</h1>
+          <p class="promo__slogan">Занялся собой? Займись котом!</p>
+          <img class="promo__img" src="img/mobile/index-can-mobile.png" width="280" height="270" alt="Cat Energy Pro: Курица">
+          <a class="promo__button button button-primary" href="form.html">Подобрать программу</a>
         </div>
+        <div class="promo__bg"></div>
       </header>
-      <section class="program page-container">
+      <section class="page-main__program program">
         <h2 class="visually-hidden">Программы</h2>
         <ul class="program__list">
           <li class="program__item">
@@ -60,7 +63,7 @@
           </li>
         </ul>
       </section>
-      <section class="usage page-container">
+      <section class="page-main__usage usage">
         <h2 class="usage__title">Как это работает</h2>
         <ul class="usage__list">
           <li class="usage__item usage__item--useful">
@@ -81,22 +84,25 @@
           </li>
         </ul>
       </section>
-      <section class="example">
-        <div class="example__wrapper page-container">
+      <section class="page-main__example example">
+        <div class="example__wrapper">
           <h2 class="example__title">Живой пример</h2>
-          <p class="example__description"></p>
+          <p class="example__description">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
           <dl class="example__list">
             <div class="example__item">
-              <dt>5 кг</dt>
-              <dd>Снижение веса</dd>
+              <dt class="example__term">5 кг</dt>
+              <dd class="example__desc">Снижение веса</dd>
             </div>
             <div class="example__item">
-              <dt>60 дней</dt>
-              <dd>Затрачено времени</dd>
+              <dt class="example__term">60 дней</dt>
+              <dd class="example__desc">Затрачено времени</dd>
             </div>
             <div class="example__item--price">
-              <dt>Затраты на питание:</dt>
-              <dd>15 000 руб.</dd>
+              <dt class="example__term--price">Затраты на питание:</dt>
+              <dd class="example__desc--price">15 000 руб.</dd>
             </div>
           </dl>
           <div class="example__slider">
@@ -109,17 +115,17 @@
               </li>
             </ol>
             <div class="example__condition">
-              <span class="condition__after">Было</span>
-              <input class="condition__range" type="range" id="condition" name="condition" min="0" max="100" value="70" step="10">
+              <span class="example__after">Было</span>
+              <input class="example__range" type="range" id="condition" name="condition" min="0" max="100" value="70" step="10">
               <label class="visually-hidden" for="condition">Изменить состояние кота.</label>
-              <span class="condition__before">Стало</span>
+              <span class="example__before">Стало</span>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <section class="contacts">
+      <section class="page-footer__contacts contacts">
         <h2 class="visually-hidden">Наш адрес</h2>
         <div class="contacts__content">
           <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
@@ -131,25 +137,25 @@
         <a class="page-footer__logo-title">
           <img src="img/cat-energy.png" width="101" height="18" alt="Cat energy.">
         </a>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+        <ul class="page-footer__social">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--vkontakte" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте</span>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--instagram" href="https://www.instagram.com/htmlacademy">
               <span class="visually-hidden">Мы в Инстаграме</span>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--facebook" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Мы в Фейсбуке</span>
             </a>
           </li>
         </ul>
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <div class="page-footer__copyright">
+          <a class="page-footer__link--academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </div>
       </section>
     </footer>
