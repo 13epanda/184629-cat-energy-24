@@ -38,5 +38,36 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo-title {
+    margin-left: 20px;
+    margin-right: auto;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__nav {
+    display: block;
+  }
+
+  .page-header__list {
+    display: flex;
+    align-items: center;
+    column-gap: 35px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__link {
+    color: #ffffff;
   }
 }

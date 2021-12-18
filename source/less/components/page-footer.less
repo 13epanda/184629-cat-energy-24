@@ -8,11 +8,93 @@
     padding: 39px 20px 22px 20px;
   }
 
-  &__link--academy {
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 34px;
+    row-gap: 20px;
+    width: 100%;
+    padding: 25px 0;
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__link--vkontakte {
+    height: 16px;
+    width: 23px;
+    background-image: url("../img/icons/vkontakte.svg");
+  }
+
+  &__link--facebook {
+    height: 22px;
+    width: 22px;
+    background-image: url("../img/icons/facebook.svg");
+  }
+
+  &__link--instagram {
+    height: 16px;
+    width: 22px;
+    background-image: url("../img/icons/instagram.svg");
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    align-self: flex-start;
     font-family: "Arial", serif;
     font-size: 16px;
     line-height: 18px;
     color: @special-grey-dark;
     text-decoration: none;
+  }
+
+  &__copyright::after {
+    content: "";
+    width: 27px;
+    height: 34px;
+    background-image: url("../img/htmlacademy.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 58px 30px 55px;
+    background-color: @base-gray;
+  }
+
+  .page-footer__social {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .page-footer__copyright {
+    align-self: auto;
+    flex-shrink: 0;
+    width: auto;
+  }
+
+  .page-footer__copyright::after {
+    margin-left: 22px;
   }
 }

@@ -17,36 +17,88 @@
   }
 
   &__description {
+    margin: 0;
     font-family: "Arial", serif;
     font-size: 14px;
     line-height: 18px;
     color: @special-grey-dark;
   }
 
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 10px;
+    margin: 20px 0 40px 0;
+  }
+
+  &__item {
+    min-width: 124px;
+    text-align: center;
+  }
+
   &__term {
+    padding: 14px 20px 17px 20px;
     font-size: 24px;
     line-height: 24px;
+    border: 1px solid @special-grey;
+    box-sizing: border-box;
+    border-radius: 3px;
   }
 
   &__desc {
-    margin: 0;
+    width: 50%;
+    transform: translateY(-6px);
+    margin: 0 auto;
+    padding: 0 15px;
     font-family: "Arial", serif;
     font-size: 12px;
     line-height: 12px;
     color: @special-grey-dark;
+    background-color: @base-gray-3;
   }
 
-  &__item--price {
+  &__item-important {
     display: flex;
     justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 1;
+    width: 100%;
   }
 
-  &__term--price,
-  &__desc--price {
+  &__term-important {
+    padding: 0;
+  }
+
+  &__desc-important {
+    margin-left: 0;
+  }
+
+  &__term-important,
+  &__desc-important {
     font-size: 14px;
     line-height: 20px;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  &__slider {
+    text-align: center;
+  }
+
+  &__cats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 232px;
+    padding-left: 0;
+  }
+
+  &__cat {
+    position: absolute;
+    list-style: none;
   }
 
   &__after,
@@ -54,5 +106,59 @@
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: transparent;
+  }
+
+  .example__wrapper {
+    padding: 0 30px;
+  }
+
+  .example__title {
+    margin-bottom: 63px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__description {
+    margin-bottom: 54px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__list {
+    justify-content: flex-start;
+    column-gap: 42px;
+  }
+
+  .example__term {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__desc {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+  }
+
+  .example__item-important {
+    width: auto;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .example__term-important,
+  .example__desc-important {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .example__range {
+    width: 426px;
   }
 }
