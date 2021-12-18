@@ -26,8 +26,8 @@
   }
 
   &__map {
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 360px;
     background-image: url("../img/mobile/location.jpg");
   }
 }
@@ -48,5 +48,22 @@
     font-size: 16px;
     line-height: 20px;
     text-align: right;
+  }
+
+  &__map {
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    position: relative;
+
+    &__content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 110px;
+    }
   }
 }

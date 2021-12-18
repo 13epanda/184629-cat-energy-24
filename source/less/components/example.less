@@ -6,6 +6,7 @@
   background-color: @base-gray-3;
 
   &__wrapper {
+    display: grid;
     padding: 25px 20px 40px 20px;
   }
 
@@ -160,5 +161,17 @@
 
   .example__range {
     width: 426px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    column-gap: 193px;
+  }
+
+  .example__slider {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    width: 591px;
   }
 }
