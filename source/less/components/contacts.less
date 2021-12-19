@@ -26,8 +26,44 @@
   }
 
   &__map {
-    width: 100%;
-    height: auto;
-    background-image: url("source/img/mobile/location.jpg");
+    width: 100vw;
+    height: 360px;
+    background-image: url("../img/mobile/location.jpg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__content {
+    padding: 56px 70px;
+  }
+
+  .contacts__invitation {
+    width: 170px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .contacts__address {
+    width: 160px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  &__map {
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    position: relative;
+
+    &__content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 110px;
+    }
   }
 }
