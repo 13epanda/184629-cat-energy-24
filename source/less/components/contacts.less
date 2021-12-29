@@ -29,6 +29,9 @@
     width: 100vw;
     height: 360px;
     background-image: url("../img/mobile/location.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
 
@@ -59,11 +62,15 @@
   .contacts {
     position: relative;
 
+    &__wrapper {
+      width: 1220px;
+      margin: 0 auto;
+    }
+
     &__content {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-left: 110px;
     }
   }
 }

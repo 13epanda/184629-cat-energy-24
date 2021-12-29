@@ -36,5 +36,53 @@
     font-size: 16px;
     line-height: 20px;
     color: #ffffff;
+    background: rgba(104, 183, 56, 0.85);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-extra {
+    &__title {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-extra {
+    margin-bottom: 86px;
+
+    &__title {
+      margin-top: 75px;
+      margin-bottom: 81px;
+    }
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__list {
+      width: 896px;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__product {
+      margin-right: auto;
+    }
+
+    &__parameters {
+      margin-right: 32px;
+    }
+
+    &__promo {
+      width: 245px;
+      margin: 0;
+    }
   }
 }
