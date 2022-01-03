@@ -13,14 +13,14 @@
       <a class="page-header__logo-title">
         <img src="img/cat-energy.png" width="101" height="18" alt="Cat energy.">
       </a>
-      <nav class="page-header__wrapper-nav">
+      <nav class="page-header__wrapper-nav page-header--closed">
         <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
         <div class="page-header__nav">
           <ul class="page-header__list">
             <li class="page-header__item">
-              <a class="page-header__link page-header__link--special page-header__link--active">
+              <a class="page-header__link page-header__link--special page-header__link--special-active">
                 Главная
               </a>
             </li>
@@ -161,18 +161,18 @@
     </footer>
 
     <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
+      var navMain = document.querySelector('.page-header__wrapper-nav');
+      var navToggle = document.querySelector('.page-header__toggle');
 
-      navMain.classList.remove('main-nav--nojs');
+      //navMain.classList.remove('main-nav--nojs');
 
       navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
+        if (navMain.classList.contains('page-header--closed')) {
+          navMain.classList.remove('page-header--closed');
+          navMain.classList.add('page-header--opened');
         } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
+          navMain.classList.add('page-header--closed');
+          navMain.classList.remove('page-header--opened');
         }
       });
     </script>
