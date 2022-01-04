@@ -29,7 +29,18 @@
     width: 60px;
     height: 60px;
     background-color: @base-green;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
   }
+
+  .user-icon(@number-user) when (@number-user > 0) {
+    .usage__list:nth-child(@{number-user}) .usage__item::before {
+      background-image: url("../img/icons/user-@{number-user}.svg");
+    }
+    .user-icon(@number-user - 1);
+  }
+  .user-icon(4);
 
   &__description {
     margin: 0 0 0 30px;
