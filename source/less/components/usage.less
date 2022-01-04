@@ -60,7 +60,6 @@
   }
 
   .usage__item::after {
-    content: "1";
     position: absolute;
     top: -40px;
     right: 0;
@@ -71,6 +70,13 @@
     line-height: 280px;
     color: @base-gray;
   }
+  .mixin(@number-user) when (@number-user > 0) {
+    .usage__list:nth-child(@{number-user}) .usage__item::after {
+      content: "@{number-user}";
+    }
+    .mixin(@number-user - 1);
+  }
+  .mixin(4);
 
   .usage__description {
     z-index: 1;
