@@ -54,33 +54,44 @@
 }
 
 @media (min-width: @tablet-width) {
-  .usage__list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    column-gap: 95px;
-    row-gap: 90px;
+  .usage {
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      column-gap: 95px;
+      row-gap: 90px;
+    }
+
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;
+      flex-shrink: 0;
+      width: 230px;
+      min-height: 227px;
+    }
+
+    &__item::after {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      font-family: "Oswald", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 280px;
+      color: @base-gray;
+    }
+
+    &__description {
+      z-index: 1;
+      margin-left: 0;
+      margin-top: 31px;
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
-  .usage__item {
-    flex-direction: column;
-    align-items: flex-start;
-    flex-shrink: 0;
-    width: 230px;
-    min-height: 227px;
-  }
-
-  .usage__item::after {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    font-family: "Oswald", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 280px;
-    line-height: 280px;
-    color: @base-gray;
-  }
   .mixin(@number-user) when (@number-user > 0) {
     .usage__list:nth-child(@{number-user}) .usage__item::after {
       content: "@{number-user}";
@@ -88,12 +99,4 @@
     .mixin(@number-user - 1);
   }
   .mixin(4);
-
-  .usage__description {
-    z-index: 1;
-    margin-left: 0;
-    margin-top: 31px;
-    font-size: 16px;
-    line-height: 24px;
-  }
 }
