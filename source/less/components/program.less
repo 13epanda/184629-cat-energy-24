@@ -82,7 +82,16 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background-image: url("../img/icons/icon_arrow.svg");
+    background-image: url("../img/icons/arrow.svg");
+  }
+
+  &__link:hover::after,
+  &__link:active::after {
+    background-image: url("../img/icons/arrow-small.svg");
+  }
+
+  &__link:active {
+    opacity: 0.3;
   }
 }
 

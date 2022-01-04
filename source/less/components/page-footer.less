@@ -9,6 +9,14 @@
     padding-bottom: 22px;
   }
 
+  &__logo-title:hover {
+    opacity: 0.8;
+  }
+
+  &__logo-title:active {
+    opacity: 0.6;
+  }
+
   &__social {
     display: flex;
     align-items: center;
@@ -27,27 +35,23 @@
 
   &__link {
     display: block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    fill: @special-grey-2;
   }
 
-  &__link--vkontakte {
-    height: 16px;
-    width: 23px;
-    background-image: url("../img/icons/vkontakte.svg");
+  &__facebook {
+    stroke: @special-grey-2;
   }
 
-  &__link--facebook {
-    height: 22px;
-    width: 22px;
-    background-image: url("../img/icons/facebook.svg");
+  &__link:hover {
+    fill: @base-green;
   }
 
-  &__link--instagram {
-    height: 16px;
-    width: 22px;
-    background-image: url("../img/icons/instagram.svg");
+  &__facebook:hover {
+    stroke: @base-green;
+  }
+
+  &__link:active {
+    opacity: 0.3;
   }
 
   &__copyright {
@@ -63,40 +67,47 @@
     text-decoration: none;
   }
 
-  &__copyright::after {
-    content: "";
+  &__academy-logo {
     width: 27px;
     height: 34px;
-    background-image: url("../img/htmlacademy.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    fill: @special-grey-2;
+  }
+
+  &__copyright:hover &__academy-logo,
+  &__copyright:active &__academy-logo {
+    fill: @base-green;
+  }
+
+  &__copyright:active {
+    opacity: 0.3;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer__wrapper {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 58px;
-    padding-bottom: 55px;
-    background-color: @base-gray;
-  }
+  .page-footer {
+    &__wrapper {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 58px;
+      padding-bottom: 55px;
+      background-color: @base-gray;
+    }
 
-  .page-footer__social {
-    margin: 0;
-    padding: 0;
-    border: none;
-  }
+    &__social {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
 
-  .page-footer__copyright {
-    align-self: auto;
-    flex-shrink: 0;
-    width: auto;
-  }
+    &__copyright {
+      align-self: auto;
+      flex-shrink: 0;
+      width: auto;
+    }
 
-  .page-footer__copyright::after {
-    margin-left: 22px;
+    &__academy-logo {
+      margin-left: 22px;
+    }
   }
 }
