@@ -34,13 +34,21 @@
     background-repeat: no-repeat;
   }
 
-  .user-icon(@number-user) when (@number-user > 0) {
-    .usage__list:nth-child(@{number-user}) .usage__item::before {
-      background-image: url("../img/icons/user-@{number-user}.svg");
-    }
-    .user-icon(@number-user - 1);
+  &__item--useful::before {
+    background-image: url("../img/icons/usage-leaf.svg");
   }
-  .user-icon(4);
+
+  &__item--simple::before {
+    background-image: url("../img/icons/usage-tub.svg");
+  }
+
+  &__item--comfortable::before {
+    background-image: url("../img/icons/usage-eat.svg");
+  }
+
+  &__item--working::before {
+    background-image: url("../img/icons/usage-alarm.svg");
+  }
 
   &__description {
     margin: 0 0 0 30px;
@@ -83,6 +91,22 @@
       color: @base-gray;
     }
 
+    &__item--useful::after {
+      content: "1";
+    }
+
+    &__item--simple::after {
+      content: "2";
+    }
+
+    &__item--comfortable::after {
+      content: "3";
+    }
+
+    &__item--working::after {
+      content: "4";
+    }
+
     &__description {
       z-index: 1;
       margin-left: 0;
@@ -91,12 +115,4 @@
       line-height: 24px;
     }
   }
-
-  .mixin(@number-user) when (@number-user > 0) {
-    .usage__list:nth-child(@{number-user}) .usage__item::after {
-      content: "@{number-user}";
-    }
-    .mixin(@number-user - 1);
-  }
-  .mixin(4);
 }
