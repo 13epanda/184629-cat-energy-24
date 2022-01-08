@@ -11,13 +11,12 @@
 
   &__item {
     position: relative;
-    padding: 30px 33px 18px 22px;
+    padding: 30px 33px 18px 20px;
     background-color: @base-gray;
   }
 
   &__title {
-    margin: 0 0 29px 0;
-    padding-left: 84px;
+    margin: 0 0 24px 0;
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     font-size: 24px;
@@ -28,33 +27,45 @@
   &__title::before {
     content: "";
     position: absolute;
-    top: 21px;
-    left: 22px;
+    top: 20px;
+    left: 18px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &__list:first-child &__title::before {
+  &__title--slim {
+    padding-left: 63px;
+  }
+
+  &__title--slim::before {
     width: 50px;
     height: 53px;
     background-image: url("../img/cat_back_slim.png");
   }
 
-  &__list:last-child &__title::before {
+  &__title--gain {
+    padding-left: 65px;
+  }
+
+  &__title--gain::before {
     width: 67px;
     height: 50px;
+    left: 10px;
     background-image: url("../img/cat_back_gain.png");
   }
 
   &__description {
-    margin: 0 0 23px 0;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 23px;
     font-family: "Arial", serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     color: @special-grey-dark;
+    border-bottom: 1px solid #d9d9d9;
   }
 
   &__link {
