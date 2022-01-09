@@ -35,7 +35,6 @@
     line-height: 26px;
   }
 
-  &__subtitle::before,
   &__subtitle::after {
     position: absolute;
     content: "";
@@ -79,6 +78,12 @@
 @media (min-width: @tablet-width) {
   .page-form {
     &__subtitle::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      width: 100vw;
+      height: 2px;
+      background-color: @base-green;
       left: calc(-100vw - 40px);
     }
 
