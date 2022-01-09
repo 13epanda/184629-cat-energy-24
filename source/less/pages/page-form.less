@@ -77,6 +77,10 @@
 
 @media (min-width: @tablet-width) {
   .page-form {
+    &__annotation {
+      width: 270px;
+    }
+
     &__subtitle::before {
       position: absolute;
       content: "";
@@ -121,10 +125,6 @@
   .page-form {
     margin-bottom: 82px;
 
-    &__annotation {
-      width: 270px;
-    }
-
     &__choice {
       display: flex;
       flex-direction: row;
@@ -140,11 +140,10 @@
     }
 
     &__item {
-      width: auto;
+      width: 569px;
     }
 
     &__line-subline {
-      width: 586px;
       border-top: 1px solid @special-grey-light;
       border-bottom: 1px solid @special-grey-light;
     }
