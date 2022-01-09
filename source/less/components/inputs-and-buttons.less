@@ -38,19 +38,49 @@
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
+    white-space: nowrap;
     color: @special-grey-dark;
   }
 
   &__input {
+    position: relative;
     flex-grow: 1;
     padding: 14px 15px;
+    width: calc(100% - 20px);
     font-size: 16px;
     line-height: 18px;
+    font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     color: @special-grey-dark;
     border: none;
     outline: 1px solid @special-grey-light;
     box-sizing: border-box;
+  }
+
+  &__input[type="email"]::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 18px;
+    height: 13px;
+    background-image: url("../img/icons/mail.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__input[type="tel"]::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/icons/phone.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -62,6 +92,7 @@
     width: 100%;
     padding: 10px 15px;
     font-size: 16px;
+    font-family: "Oswald", sans-serif;
     line-height: 18px;
     text-transform: uppercase;
     color: @special-grey-dark;
