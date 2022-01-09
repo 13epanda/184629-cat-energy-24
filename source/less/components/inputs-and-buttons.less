@@ -1,5 +1,5 @@
 .button-primary {
-  padding: 7px 44px;
+  padding: 14px 44px 7px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -7,6 +7,15 @@
   color: #ffffff;
   background-color: @base-green;
   border: none;
+  box-sizing: border-box;
+}
+
+.button-primary:hover {
+  background-color: @base-green-2;
+}
+
+.button-primary:active span {
+  opacity: 0.3;
 }
 
 .button-second {

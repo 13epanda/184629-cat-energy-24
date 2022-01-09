@@ -37,7 +37,7 @@
   }
 
   &__item {
-    min-width: 124px;
+    max-width: 124px;
     text-align: center;
   }
 
@@ -114,61 +114,83 @@
 @media (min-width: @tablet-width) {
   .example {
     background-color: transparent;
-  }
 
-  .example__title {
-    margin-bottom: 63px;
-    font-size: 60px;
-    line-height: 60px;
-  }
+    &__title {
+      margin-bottom: 63px;
+      font-size: 60px;
+      line-height: 60px;
+    }
 
-  .example__description {
-    margin-bottom: 54px;
-    font-size: 16px;
-    line-height: 24px;
-  }
+    &__description {
+      margin-bottom: 54px;
+      font-size: 16px;
+      line-height: 24px;
+    }
 
-  .example__list {
-    justify-content: flex-start;
-    column-gap: 42px;
-  }
+    &__list {
+      justify-content: flex-start;
+      column-gap: 42px;
+    }
 
-  .example__term {
-    font-size: 30px;
-    line-height: 37px;
-  }
+    &__term {
+      font-size: 30px;
+      line-height: 37px;
+    }
 
-  .example__desc {
-    font-size: 14px;
-    line-height: 14px;
-    background-color: #ffffff;
-  }
+    &__desc {
+      font-size: 14px;
+      line-height: 14px;
+      background-color: #ffffff;
+    }
 
-  .example__item-important {
-    width: auto;
-    flex-direction: column;
-    align-items: flex-end;
-  }
+    &__item {
+      min-width: 124px;
+      max-width: none;
+    }
 
-  .example__term-important,
-  .example__desc-important {
-    font-size: 20px;
-    line-height: 20px;
-  }
+    &__item-important {
+      width: auto;
+      flex-direction: column;
+      align-items: flex-end;
+    }
 
-  .example__range {
-    width: 426px;
+    &__term-important,
+    &__desc-important {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &__range {
+      width: 426px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .example__wrapper {
-    column-gap: 193px;
-  }
+  .example {
+    &__wrapper {
+      column-gap: 193px;
+    }
 
-  .example__slider {
-    grid-column: 2;
-    grid-row: 1 / 4;
-    width: 591px;
+    &__slider {
+      grid-column: 2;
+      grid-row: 1 / 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 591px;
+    }
+
+    &__list {
+      row-gap: 55px;
+    }
+
+    &__item-important {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 63px;
+    }
   }
 }
