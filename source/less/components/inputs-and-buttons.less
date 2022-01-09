@@ -82,6 +82,18 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+  &__input:hover {
+    outline: 1px solid @special-grey;
+  }
+
+  &__input:focus {
+    outline: 1px solid @special-grey-dark;
+  }
+
+  &__input:invalid {
+    outline: 1px solid @status-error;
+  }
 }
 
 .input-area {
@@ -98,6 +110,18 @@
     color: @special-grey-dark;
     border: 1px solid @special-grey-light;
     box-sizing: border-box;
+  }
+
+  &__input:hover {
+    outline: 1px solid @special-grey;
+  }
+
+  &__input:focus {
+    outline: 1px solid @special-grey-dark;
+  }
+
+  &__input:invalid {
+    outline: 1px solid @status-error;
   }
 }
 
@@ -132,6 +156,11 @@
     width: 26px;
     height: 26px;
     background-image: url("../img/icons/tick.svg");
+  }
+
+  &__input:disabled,
+  &__input:disabled ~ &__span {
+    opacity: 0.3;
   }
 
   &__span {
@@ -181,6 +210,11 @@
     line-height: 18px;
     text-transform: uppercase;
     color: @special-dark-grey-2;
+  }
+
+  &__input:disabled,
+  &__input:disabled ~ &__span {
+    opacity: 0.3;
   }
 }
 
