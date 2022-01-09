@@ -111,6 +111,27 @@
     margin-right: 14px;
     border: 1px solid @special-grey;
     box-sizing: border-box;
+    opacity: 0;
+  }
+
+  &__mark {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    border: 1px solid @special-grey;
+    box-sizing: border-box;
+  }
+
+  &__input:checked ~ &__mark::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    background-image: url("../img/icons/tick.svg");
   }
 
   &__span {
@@ -160,5 +181,36 @@
     line-height: 18px;
     text-transform: uppercase;
     color: @special-dark-grey-2;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .input-checkbox {
+    &__input {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__mark {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .input-radio {
+    &__input {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__mark {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__input:checked ~ &__mark::before {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
