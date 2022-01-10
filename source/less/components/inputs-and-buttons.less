@@ -31,6 +31,7 @@
 
 /* INPUT */
 .input-text {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: stretch;
@@ -47,7 +48,7 @@
   &__input {
     position: relative;
     flex-grow: 1;
-    padding: 14px 15px;
+    padding: 14px 51px 14px 15px;
     width: calc(100% - 20px);
     height: 45px;
     font-size: 16px;
@@ -60,7 +61,7 @@
     box-sizing: border-box;
   }
 
-  &__input[type="email"]::after {
+  &__mail {
     position: absolute;
     content: "";
     top: 50%;
@@ -68,12 +69,9 @@
     right: 15px;
     width: 18px;
     height: 13px;
-    background-image: url("../img/icons/mail.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 
-  &__input[type="tel"]::after {
+  &__phone {
     position: absolute;
     content: "";
     top: 50%;
@@ -81,9 +79,22 @@
     right: 12px;
     width: 20px;
     height: 20px;
-    background-image: url("../img/icons/phone.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+  }
+
+  &__input:focus ~ &__mail path {
+    stroke: @base-green;
+  }
+
+  &__input:focus ~ &__phone g {
+    fill: @base-green;
+  }
+
+  &__input:invalid ~ &__mail path {
+    stroke: @status-error;
+  }
+
+  &__input:invalid ~ &__phone g {
+    fill: @status-error;
   }
 
   &__input:hover {
