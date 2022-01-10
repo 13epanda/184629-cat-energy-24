@@ -1,3 +1,4 @@
+/* BUTTON */
 .button-primary {
   padding: 14px 44px 7px;
   font-size: 14px;
@@ -28,6 +29,7 @@
   text-decoration: none;
 }
 
+/* INPUT */
 .input-text {
   display: flex;
   align-items: center;
@@ -47,6 +49,7 @@
     flex-grow: 1;
     padding: 14px 15px;
     width: calc(100% - 20px);
+    height: 45px;
     font-size: 16px;
     line-height: 18px;
     font-family: "Oswald", sans-serif;
@@ -219,7 +222,37 @@
 }
 
 @media (min-width: @tablet-width) {
+  .button-primary {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .input-text {
+    &__span {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__input {
+      height: 52px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .input-area {
+    &__input {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
   .input-checkbox {
+    &__span {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
     &__input {
       width: 40px;
       height: 40px;
@@ -232,6 +265,11 @@
   }
 
   .input-radio {
+    &__span {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
     &__input {
       width: 40px;
       height: 40px;

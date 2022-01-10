@@ -4,22 +4,22 @@
   font-weight: 400;
 
   &__title {
-    margin-top: 27px;
-    margin-bottom: 37px;
-    padding: 0;
+    margin: 0 -20px;
+    padding: 27px 20px 37px;
     font-size: 36px;
     line-height: 36px;
     font-weight: 400;
+    border-top: 1px solid @special-grey;
   }
 
   &__choice {
-    margin: 0 0 26px 0;
+    margin: 0 0 23px 0;
     padding: 0;
     border: none;
   }
 
   &__annotation {
-    margin-bottom: 15px;
+    margin: 0 0 24px 0;
     padding: 0;
     font-size: 14px;
     line-height: 18px;
@@ -42,32 +42,42 @@
     width: 100vw;
     height: 2px;
     background-color: @base-green;
-  }
-
-  &__subtitle::after {
     right: -100vw;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    row-gap: 13px;
+    row-gap: 14px;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
   &__line {
-    padding-top: 24px;
     padding-bottom: 27px;
+  }
+
+  &__subline {
+    padding-top: 22px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 3px;
+    border-top: 1px solid @special-grey;
     border-bottom: 1px solid @special-grey;
   }
 
   &__button {
+    margin-top: 11px;
+    margin-bottom: 21px;
     width: 100%;
   }
 
   &__hint {
+    margin-top: 0;
+    margin-bottom: 32px;
     font-family: "Arial", sans-serif;
     font-size: 14px;
     line-height: 16px;
@@ -77,8 +87,23 @@
 
 @media (min-width: @tablet-width) {
   .page-form {
+    &__title {
+      margin: 0;
+      padding: 64px 0 54px;
+      font-size: 60px;
+      line-height: 60px;
+      border-top: none;
+    }
+
     &__annotation {
+      margin-bottom: 66px;
       width: 270px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__choice {
+      margin-bottom: 65px;
     }
 
     &__subtitle::before {
@@ -91,11 +116,22 @@
       left: calc(-100vw - 40px);
     }
 
-    &__line-subline {
+    &__list {
+      row-gap: 20px;
+    }
+
+    &__subline {
       padding-left: 28px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      margin-bottom: 6px;
       border-left: 1px solid @special-grey-light;
       border-right: 1px solid @special-grey-light;
       box-sizing: border-box;
+    }
+
+    &__line {
+      padding-bottom: 72px;
     }
 
     &__list-dop {
@@ -111,29 +147,45 @@
     }
 
     &__button {
+      margin-top: -11px;
+      margin-bottom: 16px;
       margin-right: 61px;
       width: 50%;
     }
 
     &__hint {
       display: inline-block;
+      margin-top: -11px;
+      margin-bottom: 16px;
+      font-size: 16px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-form {
-    margin-bottom: 82px;
+    margin-bottom: 66px;
+
+    &__title {
+      padding: 74px 0 56px;
+    }
 
     &__choice {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      margin-bottom: 69px;
+    }
+
+    &__subtitle {
+      margin-bottom: 76px;
+      font-size: 36px;
+      line-height: 36px;
     }
 
     &__line {
       width: 569px;
-      justify-content: center;
+      justify-content: space-between;
       padding-top: 0;
       padding-bottom: 0;
       border-bottom: none;
@@ -143,9 +195,17 @@
       width: 569px;
     }
 
-    &__line-subline {
-      border-top: 1px solid @special-grey-light;
-      border-bottom: 1px solid @special-grey-light;
+    &__list-dop {
+      margin-top: -19px;
+    }
+
+    &__item-dop {
+      width: auto;
+    }
+
+    &__subline {
+      row-gap: 13px;
+      margin-bottom: 0;
     }
 
     &__input {
@@ -156,6 +216,10 @@
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
+    }
+
+    &__button {
+      margin-top: -8px;
     }
   }
 }
