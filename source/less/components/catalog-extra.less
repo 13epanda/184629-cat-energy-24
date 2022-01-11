@@ -183,6 +183,12 @@
       top: 57px;
       transform: translateX(0);
     }
+
+    &__term,
+    &__desc {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -202,11 +208,16 @@
 
     &__list {
       width: 896px;
+      margin-bottom: 0;
+      border-right: none;
+      border-left: none;
     }
 
     &__item {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
+      padding: 15px 0 17px;
     }
 
     &__product {
@@ -214,12 +225,37 @@
     }
 
     &__parameters {
+      width: 288px;
       margin-right: 32px;
     }
 
     &__promo {
-      width: 245px;
+      width: auto;
+      height: 288px;
       margin: 0;
+    }
+
+    &__order {
+      width: 244px;
+    }
+
+    &__term,
+    &__desc {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__promo {
+      align-items: flex-end;
+      height: inherit;
+    }
+
+    &__promo-link {
+      padding: 40px;
+    }
+
+    &__event {
+      text-align: center;
     }
   }
 }
