@@ -4,6 +4,33 @@
   font-weight: 400;
   color: #000000;
 
+  &__title {
+    position: relative;
+    margin: 0;
+    padding: 27px 0 41px;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+  }
+
+  &__title::before,
+  &__title::after {
+    position: absolute;
+    content: "";
+    left: -20px;
+    height: 1px;
+    width: 100vw;
+    background-color: @base-grey-2;
+  }
+
+  &__title::before {
+    top: 0;
+  }
+
+  &__title::after {
+    bottom: 0;
+  }
+
   .catalog__title {
     margin: 0 0 41px 0;
     font-size: 36px;
@@ -17,8 +44,15 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-catalog__title {
-    font-size: 60px;
-    line-height: 60px;
+  .page-catalog {
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+    }
+
+    &__title::before,
+    &__title::after {
+      content: none;
+    }
   }
 }

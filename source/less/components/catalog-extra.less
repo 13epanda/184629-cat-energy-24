@@ -1,26 +1,65 @@
 .catalog-extra {
   &__title {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 14px;
+    padding-right: 22px;
+    width: fit-content;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
     color: @special-dark-grey-2;
   }
 
+  &__title::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    width: 100vw;
+    height: 2px;
+    background-color: @base-green;
+    right: -100vw;
+  }
+
+  &__title::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    width: 100vw;
+    height: 2px;
+    background-color: @base-green;
+    left: calc(-100vw - 40px);
+  }
+
+  &__wrap {
+    margin-top: 36px;
+  }
+
   &__list {
-    margin: 0;
+    margin: 0 0 35px 0;
     padding: 0;
     list-style: none;
+    border-top: 1px solid @base-grey-2;
   }
 
   &__item {
     padding: 13px 0 19px 0;
+    border-bottom: 1px solid @base-grey-2;
   }
 
   &__product {
+    margin: 0;
     font-size: 16px;
     line-height: 16px;
+    font-weight: 400;
     text-transform: uppercase;
     color: @special-dark-grey-2;
+  }
+
+  &__parameters {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__term,
@@ -31,20 +70,124 @@
     color: @special-grey-dark;
   }
 
+  &__order {
+    width: 100%;
+  }
+
   &__promo {
+    position: relative;
+    height: 290px;
+    margin-bottom: 35px;
+    background-image: url("../img/washing-cat.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__promo::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(104, 183, 56, 0.85);
+  }
+
+  &__promo-link {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 55px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  &__event {
+    z-index: 1;
+    width: 161px;
     font-family: "Arial", serif;
     font-size: 16px;
     line-height: 20px;
     color: #ffffff;
-    background: rgba(104, 183, 56, 0.85);
+    text-align: center;
+  }
+
+  &__event::before {
+    position: absolute;
+    content: "";
+    top: 59px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/icons/gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
 
 @media (min-width: @tablet-width) {
   .catalog-extra {
     &__title {
+      margin-top: 68px;
+      margin-left: 38px;
       font-size: 36px;
       line-height: 36px;
+    }
+
+    &__wrap {
+      margin-top: 80px;
+    }
+
+    &__list {
+      margin-bottom: 69px;
+      border: 1px solid @base-grey-2;
+    }
+
+    &__item {
+      padding: 26px 38px 26px 28px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    &__product {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &__parameters {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__promo {
+      margin-bottom: 76px;
+      height: 200px;
+    }
+
+    &__promo-link {
+      justify-content: flex-end;
+    }
+
+    &__event {
+      text-align: left;
+    }
+
+    &__event::before {
+      left: 77px;
+      top: 57px;
+      transform: translateX(0);
+    }
+
+    &__term,
+    &__desc {
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 }
@@ -65,11 +208,16 @@
 
     &__list {
       width: 896px;
+      margin-bottom: 0;
+      border-right: none;
+      border-left: none;
     }
 
     &__item {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
+      padding: 15px 0 17px;
     }
 
     &__product {
@@ -77,12 +225,33 @@
     }
 
     &__parameters {
+      width: 288px;
       margin-right: 32px;
     }
 
     &__promo {
-      width: 245px;
+      width: auto;
+      height: inherit;
       margin: 0;
+      align-items: flex-end;
+    }
+
+    &__order {
+      width: 244px;
+    }
+
+    &__term,
+    &__desc {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__promo-link {
+      padding: 40px;
+    }
+
+    &__event {
+      text-align: center;
     }
   }
 }
