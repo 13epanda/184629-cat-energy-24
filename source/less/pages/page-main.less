@@ -13,10 +13,14 @@
       left: 0;
       width: 100%;
       height: 61%;
-      background-image: url("../img/mobile/promo.jpg");
+      background-image: url("../img/mobile/index-background-mobile.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/mobile/index-background-mobile@2.jpg");
+      }
     }
 
     &__bg::before {
@@ -146,6 +150,11 @@
         left: 50%;
         width: 50%;
         height: calc(100% + 100px);
+        background-image: url("../img/desktop/index-background-desktop.jpg");
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/desktop/index-background-desktop@2.jpg");
+        }
       }
     }
 
