@@ -130,16 +130,12 @@
           </dl>
           <div class="example__slider">
             <ol class="example__cats">
-              <li class="example__cat">
-                <img src="img/mobile/main/cat-fat.png" width="280" height="232" alt="Пухлый котик.">
-              </li>
-              <li class="example__cat">
-                <img src="img/mobile/main/cat-skinny.png" width="243" height="232" alt="Худой котик.">
-              </li>
+              <li class="example__cat example__cat--after"></li>
+              <li class="example__cat example__cat--before"></li>
             </ol>
             <div class="example__condition">
               <span class="example__after">Было</span>
-              <input class="example__range" type="range" id="condition" name="condition" min="0" max="100" value="70" step="10">
+              <input class="example__range" type="range" id="condition" name="condition" min="0" max="100" value="50" step="50">
               <label class="visually-hidden" for="condition">Изменить состояние кота.</label>
               <span class="example__before">Стало</span>
             </div>
@@ -200,4 +196,5 @@
     </footer>
   </body>
   <script src="js/header-nav.js" type="text/javascript"></script>
+  <script src="js/example-cats.js" type="text/javascript"></script>
 </html>
