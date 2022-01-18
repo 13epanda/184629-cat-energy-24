@@ -148,7 +148,22 @@
 
 @media (min-width: @tablet-width) {
   .example {
+    position: relative;
     background-color: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 462px;
+      width: 100%;
+      background-color: @base-gray-3;
+    }
+
+    .example__wrapper {
+      padding-bottom: 65px;
+    }
 
     &__title {
       margin-bottom: 63px;
@@ -157,14 +172,16 @@
     }
 
     &__description {
-      margin-bottom: 54px;
+      margin-bottom: 33px;
       font-size: 16px;
       line-height: 24px;
     }
 
     &__list {
       justify-content: flex-start;
+      align-items: flex-start;
       column-gap: 42px;
+      margin-bottom: 60px;
     }
 
     &__term {
@@ -173,20 +190,23 @@
     }
 
     &__desc {
+      width: auto;
+      transform: translateY(-5px);
       font-size: 14px;
       line-height: 14px;
       background-color: #ffffff;
     }
 
     &__item {
-      min-width: 124px;
-      max-width: none;
+      width: 162px;
     }
 
     &__item-important {
       width: auto;
       flex-direction: column;
       align-items: flex-end;
+      row-gap: 10px;
+      margin-top: 10px;
     }
 
     &__term-important,
@@ -205,6 +225,7 @@
 
     &__cats {
       height: 511px;
+      margin-bottom: 45px;
     }
 
     &__cat--after {

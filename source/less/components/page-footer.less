@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 51px;
+    padding-top: 38px;
     padding-bottom: 22px;
   }
 
@@ -26,6 +26,7 @@
     width: 100%;
     padding: 20px 0 15px;
     margin-top: 27px;
+    margin-bottom: 21px;
     border-bottom: 1px solid #d9d9d9;
     border-top: 1px solid #d9d9d9;
   }
@@ -93,21 +94,42 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      padding-top: 58px;
+      padding-top: 62px;
       padding-bottom: 55px;
       background-color: @base-gray;
+    }
+
+    .page-footer__logo-title {
+      margin-right: 35px;
     }
 
     &__social {
       margin: 0;
       padding: 0;
       border: none;
+      column-gap: 23px;
+    }
+
+    .page-footer__vkontakte {
+      width: 22px;
+      height: 30px;
+    }
+
+    .page-footer__instagram {
+      width: 23px;
+      height: 23px;
+    }
+
+    .page-footer__facebook {
+      width: 28px;
+      height: 33px;
     }
 
     &__copyright {
       align-self: auto;
       flex-shrink: 0;
       width: auto;
+      margin-top: -5px;
     }
 
     &__academy-logo {

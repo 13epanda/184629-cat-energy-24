@@ -34,7 +34,7 @@ function init() {
     // Своё изображение иконки метки.
     iconImageHref: '../img/tablet/map-pin.png',
     // Размеры метки.
-    iconImageSize: [57, 53],
+    iconImageSize: [113, 106],
     // Смещение левого верхнего угла иконки относительно
     // её "ножки" (точки привязки).
     iconImageOffset: [0, 0],

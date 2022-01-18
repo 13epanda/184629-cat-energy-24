@@ -66,8 +66,8 @@
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
-      column-gap: 95px;
+      justify-content: flex-start;
+      column-gap: 150px;
       row-gap: 90px;
     }
 
@@ -75,8 +75,13 @@
       flex-direction: column;
       align-items: flex-start;
       flex-shrink: 0;
-      width: 230px;
+      width: 235px;
       min-height: 227px;
+    }
+
+    .usage__item::before {
+      width: 80px;
+      height: 80px;
     }
 
     &__item::after {
