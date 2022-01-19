@@ -106,12 +106,9 @@
 
     .promo__button {
       z-index: 1;
-      padding: 14px 26px;
       margin-left: 86px;
       margin-right: 60px;
       width: auto;
-      font-size: 20px;
-      line-height: 20px;
     }
 
     .promo__picture {
@@ -145,29 +142,31 @@
 
       &__wrapper {
         justify-content: left;
-        padding: 32px 0 54px;
+        padding: 97px 0 54px;
+        margin-bottom: 215px;
       }
 
       &__picture {
-        grid-column: 2;
-        grid-row: 1 / 4;
-        top: 0;
         width: auto;
-        height: 558px;
+        height: 500px;
+        position: absolute;
+        top: 15px;
+        right: 210px;
       }
 
       &__img {
         width: 100%;
         height: 100%;
+        min-height: auto;
       }
 
       &__bg {
         display: block;
         position: absolute;
-        top: -100px;
+        top: -126px;
         left: 50%;
-        width: 50%;
-        height: calc(100% + 100px);
+        width: 50vw;
+        height: 695px;
         background-image: url("../img/desktop/index-background-desktop.jpg");
 
         @media (min-resolution: 2dppx) {
@@ -177,7 +176,12 @@
     }
 
     .program {
-      margin-bottom: 71px;
+      margin-bottom: 73px;
+    }
+
+    .usage {
+      padding-bottom: 0;
+      margin-bottom: 40px;
     }
   }
 }

@@ -11,6 +11,7 @@
 
   &__item {
     position: relative;
+    box-sizing: border-box;
     padding: 30px 33px 18px 20px;
     background-color: @base-gray;
   }
@@ -169,11 +170,11 @@
 
     &__item {
       width: 570px;
-      padding: 77px 61px 55px 52px;
+      padding: 77px 61px 55px 60px;
     }
 
     &__title {
-      padding-left: 172px;
+      padding-left: 163px;
       margin-bottom: 73px;
     }
 
@@ -188,9 +189,13 @@
     &__list:last-child &__title::before {
       width: 134px;
       height: 100px;
-      top: 47px;
-      left: 33px;
+      top: 43px;
+      left: 42px;
       right: auto;
+    }
+
+    .program__description {
+      margin-bottom: 5px;
     }
   }
 }
