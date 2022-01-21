@@ -95,29 +95,47 @@
 
 @media (min-width: @tablet-width) {
   .page-form {
+    margin: 46px 70px 0;
+
     &__title {
-      margin: 0;
-      padding: 64px 0 54px;
+      margin: 0 0 55px;
+      padding: 0;
       font-size: 60px;
       line-height: 60px;
       border-top: none;
     }
 
     &__annotation {
-      margin-bottom: 66px;
-      width: 270px;
+      margin-bottom: 65px;
+      width: 350px;
       font-size: 20px;
       line-height: 30px;
     }
 
     &__choice {
-      margin-bottom: 65px;
+      margin-bottom: 75px;
+    }
+
+    .page-form__choice:last-of-type {
+      margin-bottom: 50px;
+    }
+
+    .page-form__subtitle {
+      padding-right: 40px;
+      margin-bottom: 75px;
+      max-width: none;
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    &__subtitle::before,
+    .page-form__subtitle::after {
+      top: 22px;
     }
 
     &__subtitle::before {
       position: absolute;
       content: "";
-      top: 50%;
       width: 100vw;
       height: 2px;
       background-color: @base-green;
@@ -129,10 +147,11 @@
     }
 
     &__subline {
+      row-gap: 12px;
       padding-left: 28px;
       padding-top: 25px;
       padding-bottom: 25px;
-      margin-bottom: 6px;
+      margin: 0;
       border-left: 1px solid @special-grey-light;
       border-right: 1px solid @special-grey-light;
       box-sizing: border-box;
@@ -142,23 +161,31 @@
       padding-bottom: 72px;
     }
 
-    &__list-dop {
+    .page-form__list-row {
+      margin-bottom: -9px;
+    }
+
+    .page-form__list-dop {
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
-      column-gap: 61px;
+      row-gap: 26px;
       width: 100%;
+      margin-top: -21px;
     }
 
     &__item-dop {
-      width: calc(50% - 61px);
+      width: calc(50% - 30px);
     }
 
     &__button {
-      margin-top: -11px;
+      margin-top: 0;
       margin-bottom: 72px;
       margin-right: 61px;
-      width: 50%;
+      padding: 16px 26px;
+      width: 282px;
+      font-size: 20px;
+      box-sizing: border-box;
     }
 
     &__hint {
