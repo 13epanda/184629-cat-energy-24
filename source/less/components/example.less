@@ -168,7 +168,7 @@
     }
 
     .example__wrapper {
-      padding-bottom: 65px;
+      padding-bottom: 55px;
     }
 
     .example__title {
@@ -235,7 +235,7 @@
 
     .example__cats {
       height: 511px;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
 
     .example__cat--after {
@@ -253,11 +253,30 @@
         background-image: url("../img/tablet/main/cat-fat@2x.png");
       }
     }
+
+    .example__after {
+      margin-left: 13px;
+    }
+
+    .example__before {
+      margin-right: 8px;
+    }
+
+    .example__after,
+    .example__before {
+      font-size: 20px;
+      line-height: 30px;
+      border-bottom: 1px dotted @special-grey;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
+    &::before {
+      height: 465px;
+    }
+
     .example__wrapper {
       column-gap: 193px;
       padding-left: 8px;
@@ -299,8 +318,9 @@
       width: 591px;
     }
 
-    &__list {
+    .example__list {
       row-gap: 38px;
+      margin-bottom: 75px;
     }
 
     &__item-important {
@@ -311,7 +331,15 @@
     }
 
     .example__cats {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+    }
+
+    .example__after {
+      margin-left: 21px;
+    }
+
+    .example__before {
+      margin-right: 0;
     }
 
     .example__after,

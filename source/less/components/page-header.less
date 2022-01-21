@@ -104,8 +104,9 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    padding-left: 17px;
-    padding-top: 52px;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
 
     .page-header__logo-title {
       margin-left: 12px;
@@ -113,13 +114,15 @@
     }
 
     .page-header__cat-energy {
-      height: 25px;
-      width: 120px;
       margin-top: 8px;
     }
 
-    &__toggle {
+    .page-header__toggle {
       display: none;
+    }
+
+    .page-header--closed {
+      margin-top: 0;
     }
 
     &--closed &__nav {
@@ -133,9 +136,9 @@
     &__list {
       display: flex;
       align-items: center;
-      column-gap: 50px;
+      column-gap: 36px;
       width: auto;
-      margin: 3px 2px 0 0;
+      margin: 6px 10px 0 0;
     }
 
     &__item {
@@ -154,6 +157,7 @@
     &__link--special-active,
     &__link--active {
       border-bottom: 2px solid @base-green;
+      margin-bottom: 3px;
     }
   }
 }
@@ -162,6 +166,28 @@
   .page-header {
     width: 1220px;
     margin: 0 auto;
+    padding-left: 17px;
+    padding-top: 52px;
+
+    .page-header__cat-energy {
+      height: 25px;
+      width: 120px;
+    }
+
+    &__list {
+      column-gap: 33px;
+      margin: 3px 2px 0 0;
+    }
+
+    .page-header__link {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    .page-header__link--active,
+    .page-header__link--special-active {
+      margin-bottom: 5px;
+    }
 
     &__link--special {
       color: #ffffff;
