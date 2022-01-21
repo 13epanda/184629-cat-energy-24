@@ -199,15 +199,18 @@
 
 @media (min-width: @desktop-width) {
   .page-form {
-    &__title {
-      padding: 74px 0 56px;
-    }
+    margin: 55px auto 0;
+    padding: 0 8px;
 
     &__choice {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       margin-bottom: 69px;
+    }
+
+    .page-form__choice:last-of-type {
+      margin-bottom: 55px;
     }
 
     &__subtitle {
@@ -233,12 +236,13 @@
     }
 
     &__item-dop {
-      width: auto;
+      width: 235px;
     }
 
     &__subline {
       row-gap: 13px;
       margin-bottom: 0;
+      width: 570px;
     }
 
     &__input {
@@ -249,10 +253,12 @@
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
+      margin-bottom: -2px;
     }
 
     &__button {
-      margin-top: -8px;
+      width: 568px;
+      margin-right: 80px;
       margin-bottom: 82px;
     }
   }
