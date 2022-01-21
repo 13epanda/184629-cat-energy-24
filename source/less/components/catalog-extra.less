@@ -1,9 +1,7 @@
 .catalog-extra {
   &__title {
     position: relative;
-    margin-top: 20px;
-    margin-right: auto;
-    margin-bottom: 14px;
+    margin: 0 auto 14px;
     padding-right: 22px;
     width: fit-content;
     font-size: 24px;
@@ -12,24 +10,23 @@
     color: @special-dark-grey-2;
   }
 
-  &__title::after {
+  .catalog-extra__title::before,
+  .catalog-extra__title::after {
     position: absolute;
     content: "";
     top: 50%;
+    transform: translateY(5px);
     width: 100vw;
     height: 2px;
     background-color: @base-green;
-    right: -100vw;
   }
 
-  &__title::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    width: 100vw;
-    height: 2px;
-    background-color: @base-green;
+  .catalog-extra__title::after {
     left: calc(-100vw - 40px);
+  }
+
+  .catalog-extra__title::before {
+    right: -100vw;
   }
 
   &__wrap {
@@ -136,10 +133,10 @@
 @media (min-width: @tablet-width) {
   .catalog-extra {
     &__title {
-      margin-top: 68px;
       margin-left: 38px;
       font-size: 36px;
       line-height: 36px;
+      padding-right: 35px;
     }
 
     &__wrap {
@@ -152,17 +149,24 @@
     }
 
     &__item {
-      padding: 26px 38px 26px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      row-gap: 21px;
+      align-content: center;
+      padding: 26px 38px 27px 38px;
       width: 100%;
       box-sizing: border-box;
     }
 
     &__product {
+      margin-right: auto;
       font-size: 20px;
       line-height: 20px;
     }
 
     &__parameters {
+      margin: 4px 0 0;
       font-size: 16px;
       line-height: 20px;
     }
@@ -179,10 +183,12 @@
 
     &__promo-link {
       justify-content: flex-end;
+      padding-right: 124px;
     }
 
     &__event {
       text-align: left;
+      margin: auto 0;
     }
 
     &__event::before {
@@ -195,6 +201,10 @@
     &__desc {
       font-size: 16px;
       line-height: 20px;
+    }
+
+    .catalog-extra__desc {
+      margin-left: 49px;
     }
   }
 }
