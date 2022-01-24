@@ -7,7 +7,7 @@
 
     <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css" type="text/css" as="style">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -19,14 +19,14 @@
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
         <picture>
-          <source media="(min-width: 1200px)" width="70" height="60" srcset="img/desktop/logo-desktop.svg">
-          <source media="(min-width: 768px)" width="60" height="50" srcset="img/tablet/logo-tablet.svg">
+          <source media="(min-width: 1200px)" srcset="img/desktop/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.svg">
           <img src="img/mobile/logo-mobile.svg" width="34" height="38" alt="Логотип магазина.">
         </picture>
       </a>
       <a class="page-header__logo-title" href="index.html">
         <picture>
-          <source media="(min-width: 768px)" width="101" height="19" srcset="img/tablet/logo-cat-energy.svg">
+          <source media="(min-width: 768px)" srcset="img/tablet/logo-cat-energy.svg">
           <img src="img/mobile/cat-energy-mobile.svg" width="101" height="18" alt="Cat energy.">
         </picture>
       </a>
@@ -323,9 +323,8 @@
         </div>
       </section>
     </footer>
+
+    <script src="js/header-nav.js" type="text/javascript"></script>
+    <script src="js/map.js" type="text/javascript"></script>
   </body>
-
-  <script src="js/header-nav.js" type="text/javascript"></script>
-  <script src="js/map.js" type="text/javascript"></script>
-
 </html>
