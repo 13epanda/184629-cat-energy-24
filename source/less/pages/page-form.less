@@ -1,9 +1,10 @@
 .page-form {
+  margin-bottom: 27px;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
 
-  &__title {
+  .page-form__title {
     margin: 0 -20px;
     padding: 27px 20px 37px;
     font-size: 36px;
@@ -12,40 +13,43 @@
     border-top: 1px solid @special-grey;
   }
 
-  &__choice {
-    margin: 0 0 23px 0;
+  .page-form__annotation {
+    margin: 0 0 40px 0;
     padding: 0;
-    border: none;
-  }
-
-  &__annotation {
-    margin: 0 0 24px 0;
-    padding: 0;
+    width: 226px;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
   }
 
-  &__subtitle {
+  .page-form__choice {
+    margin: 0 0 23px 0;
+    padding: 0;
+    border: none;
+  }
+
+  .page-form__subtitle {
     position: relative;
     margin-bottom: 35px;
     margin-right: auto;
     padding-right: 22px;
+    width: auto;
+    max-width: 187px;
     font-size: 24px;
     line-height: 26px;
   }
 
-  &__subtitle::after {
+  .page-form__subtitle::after {
     position: absolute;
     content: "";
-    top: 50%;
+    top: 15px;
     width: 100vw;
     height: 2px;
     background-color: @base-green;
     right: -100vw;
   }
 
-  &__list {
+  .page-form__list {
     display: flex;
     flex-direction: column;
     row-gap: 14px;
@@ -54,30 +58,34 @@
     list-style: none;
   }
 
-  &__line {
-    padding-bottom: 27px;
+  .page-form__line {
+    padding-bottom: 23px;
   }
 
-  &__subline {
-    padding-top: 22px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-bottom: 3px;
+  .page-form__list-dop {
+    row-gap: 7px;
+    margin-top: -5px;
+  }
+
+  .page-form__subline {
+    row-gap: 13px;
+    padding: 22px 0 18px 20px;
+    margin: 0 -20px 4px -20px;
     border-top: 1px solid @special-grey;
     border-bottom: 1px solid @special-grey;
   }
 
-  &__button {
-    margin-top: 11px;
+  .page-form__button {
+    margin-top: 8px;
     margin-bottom: 21px;
     width: 100%;
+    font-size: 16px;
+    line-height: 20px;
   }
 
-  &__hint {
+  .page-form__hint {
     margin-top: 0;
-    margin-bottom: 32px;
+    margin-bottom: 0;
     font-family: "Arial", sans-serif;
     font-size: 14px;
     line-height: 16px;
@@ -87,73 +95,100 @@
 
 @media (min-width: @tablet-width) {
   .page-form {
-    &__title {
-      margin: 0;
-      padding: 64px 0 54px;
+    margin: 46px 70px 0;
+
+    .page-form__title {
+      margin: 0 0 55px;
+      padding: 0;
       font-size: 60px;
       line-height: 60px;
       border-top: none;
     }
 
-    &__annotation {
-      margin-bottom: 66px;
-      width: 270px;
+    .page-form__annotation {
+      margin-bottom: 65px;
+      width: 350px;
       font-size: 20px;
       line-height: 30px;
     }
 
-    &__choice {
-      margin-bottom: 65px;
+    .page-form__choice {
+      margin-bottom: 75px;
     }
 
-    &__subtitle::before {
+    .page-form__choice:last-of-type {
+      margin-bottom: 50px;
+    }
+
+    .page-form__subtitle {
+      padding-right: 40px;
+      margin-bottom: 75px;
+      max-width: none;
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    .page-form__subtitle::before,
+    .page-form__subtitle::after {
+      top: 22px;
+    }
+
+    .page-form__subtitle::before {
       position: absolute;
       content: "";
-      top: 50%;
       width: 100vw;
       height: 2px;
       background-color: @base-green;
       left: calc(-100vw - 40px);
     }
 
-    &__list {
+    .page-form__list {
       row-gap: 20px;
     }
 
-    &__subline {
+    .page-form__subline {
+      row-gap: 12px;
       padding-left: 28px;
       padding-top: 25px;
       padding-bottom: 25px;
-      margin-bottom: 6px;
+      margin: 0;
       border-left: 1px solid @special-grey-light;
       border-right: 1px solid @special-grey-light;
       box-sizing: border-box;
     }
 
-    &__line {
+    .page-form__line {
       padding-bottom: 72px;
     }
 
-    &__list-dop {
+    .page-form__list-row {
+      margin-bottom: -9px;
+    }
+
+    .page-form__list-dop {
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
-      column-gap: 61px;
+      row-gap: 26px;
       width: 100%;
+      margin-top: -21px;
     }
 
-    &__item-dop {
-      width: calc(50% - 61px);
+    .page-form__item-dop {
+      width: calc(50% - 30px);
     }
 
-    &__button {
-      margin-top: -11px;
+    .page-form__button {
+      margin-top: 0;
       margin-bottom: 72px;
       margin-right: 61px;
-      width: 50%;
+      padding: 16px 26px;
+      width: 282px;
+      font-size: 20px;
+      box-sizing: border-box;
     }
 
-    &__hint {
+    .page-form__hint {
       display: inline-block;
       margin-top: -11px;
       margin-bottom: 0;
@@ -164,24 +199,27 @@
 
 @media (min-width: @desktop-width) {
   .page-form {
-    &__title {
-      padding: 74px 0 56px;
-    }
+    margin: 55px auto 0;
+    padding: 0 8px;
 
-    &__choice {
+    .page-form__choice {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       margin-bottom: 69px;
     }
 
-    &__subtitle {
+    .page-form__choice:last-of-type {
+      margin-bottom: 55px;
+    }
+
+    .page-form__subtitle {
       margin-bottom: 76px;
       font-size: 36px;
       line-height: 36px;
     }
 
-    &__line {
+    .page-form__line {
       width: 569px;
       justify-content: space-between;
       padding-top: 0;
@@ -189,35 +227,38 @@
       border-bottom: none;
     }
 
-    &__item {
+    .page-form__item {
       width: 569px;
     }
 
-    &__list-dop {
+    .page-form__list-dop {
       margin-top: -19px;
     }
 
-    &__item-dop {
-      width: auto;
+    .page-form__item-dop {
+      width: 235px;
     }
 
-    &__subline {
+    .page-form__subline {
       row-gap: 13px;
       margin-bottom: 0;
+      width: 570px;
     }
 
-    &__input {
+    .page-form__input {
       width: 100%;
     }
 
-    &__list-row {
+    .page-form__list-row {
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
+      margin-bottom: -2px;
     }
 
-    &__button {
-      margin-top: -8px;
+    .page-form__button {
+      width: 568px;
+      margin-right: 80px;
       margin-bottom: 82px;
     }
   }

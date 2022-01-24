@@ -1,267 +1,276 @@
-.catalog-extra {
-  &__title {
-    position: relative;
-    margin-right: auto;
-    margin-bottom: 14px;
-    padding-right: 22px;
-    width: fit-content;
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-    color: @special-dark-grey-2;
-  }
+.catalog-extra__title {
+  position: relative;
+  margin: 0 auto 14px;
+  padding-right: 22px;
+  width: fit-content;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: @special-dark-grey-2;
+}
 
-  &__title::after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    width: 100vw;
-    height: 2px;
-    background-color: @base-green;
-    right: -100vw;
-  }
+.catalog-extra__title::before,
+.catalog-extra__title::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(5px);
+  width: 100vw;
+  height: 2px;
+  background-color: @base-green;
+}
 
-  &__title::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    width: 100vw;
-    height: 2px;
-    background-color: @base-green;
-    left: calc(-100vw - 40px);
-  }
+.catalog-extra__title::after {
+  left: calc(-100vw - 40px);
+}
 
-  &__wrap {
-    margin-top: 36px;
-  }
+.catalog-extra__title::before {
+  right: -100vw;
+}
 
-  &__list {
-    margin: 0 0 35px 0;
-    padding: 0;
-    list-style: none;
-    border-top: 1px solid @base-grey-2;
-  }
+.catalog-extra__wrap {
+  margin-top: 32px;
+}
 
-  &__item {
-    padding: 13px 0 19px 0;
-    border-bottom: 1px solid @base-grey-2;
-  }
+.catalog-extra__list {
+  margin: 0 0 35px 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid @base-grey-2;
+}
 
-  &__product {
-    margin: 0;
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: @special-dark-grey-2;
-  }
+.catalog-extra__item {
+  padding: 13px 0 19px 0;
+  border-bottom: 1px solid @base-grey-2;
+}
 
-  &__parameters {
-    margin: 15px 0;
-    display: flex;
-    justify-content: space-between;
-  }
+.catalog-extra__product {
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @special-dark-grey-2;
+}
 
-  &__term,
-  &__desc {
-    font-family: "Arial", serif;
-    font-size: 14px;
-    line-height: 14px;
-    color: @special-grey-dark;
-  }
+.catalog-extra__parameters {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
 
-  &__order {
-    width: 100%;
-  }
+.catalog-extra__term,
+.catalog-extra__desc {
+  font-family: "Arial", serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: @special-grey-dark;
+}
 
-  &__promo {
-    position: relative;
-    height: 290px;
-    margin-bottom: 35px;
-    background-image: url("../img/washing-cat.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+.catalog-extra__order {
+  width: 100%;
+}
 
-  &__promo::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(104, 183, 56, 0.85);
-  }
+.catalog-extra__promo {
+  position: relative;
+  height: 290px;
+  margin-bottom: 29px;
+  background-color: @base-grey-2;
+  background-image: url("../img/washing-cat.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
-  &__promo-link {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 55px;
-    box-sizing: border-box;
-    text-decoration: none;
-    color: #ffffff;
-  }
+.catalog-extra__promo::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(104, 183, 56, 0.85);
+}
 
-  &__event {
-    z-index: 1;
-    width: 161px;
-    font-family: "Arial", serif;
-    font-size: 16px;
-    line-height: 20px;
-    color: #ffffff;
-    text-align: center;
-  }
+.catalog-extra__promo-link {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 45px 55px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #ffffff;
+}
 
-  &__event::before {
-    position: absolute;
-    content: "";
-    top: 59px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 78px;
-    height: 80px;
-    background-image: url("../img/icons/gift.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+.catalog-extra__event {
+  z-index: 1;
+  width: 161px;
+  margin: 0;
+  font-family: "Arial", serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.catalog-extra__event::before {
+  position: absolute;
+  content: "";
+  top: 59px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78px;
+  height: 80px;
+  background-image: url("../img/icons/gift.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @media (min-width: @tablet-width) {
-  .catalog-extra {
-    &__title {
-      margin-top: 68px;
-      margin-left: 38px;
-      font-size: 36px;
-      line-height: 36px;
-    }
+  .catalog-extra__title {
+    margin-left: 38px;
+    font-size: 36px;
+    line-height: 36px;
+    padding-right: 35px;
+  }
 
-    &__wrap {
-      margin-top: 80px;
-    }
+  .catalog-extra__wrap {
+    margin-top: 80px;
+  }
 
-    &__list {
-      margin-bottom: 69px;
-      border: 1px solid @base-grey-2;
-    }
+  .catalog-extra__list {
+    margin-bottom: 69px;
+    border: 1px solid @base-grey-2;
+  }
 
-    &__item {
-      padding: 26px 38px 26px 28px;
-      width: 100%;
-      box-sizing: border-box;
-    }
+  .catalog-extra__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 21px;
+    align-content: center;
+    padding: 26px 38px 27px 38px;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-    &__product {
-      font-size: 20px;
-      line-height: 20px;
-    }
+  .catalog-extra__product {
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 20px;
+  }
 
-    &__parameters {
-      font-size: 16px;
-      line-height: 20px;
-    }
+  .catalog-extra__parameters {
+    margin: 4px 0 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
 
-    &__promo {
-      margin-bottom: 76px;
-      height: 200px;
-      background-image: url("../img/tablet/catalog/washing-cat-tablet.jpg");
+  .catalog-extra__promo {
+    margin-bottom: 76px;
+    height: 200px;
+    background-image: url("../img/tablet/catalog/washing-cat-tablet.jpg");
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/tablet/catalog/washing-cat-tablet@2.jpg");
-      }
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/tablet/catalog/washing-cat-tablet@2.jpg");
     }
+  }
 
-    &__promo-link {
-      justify-content: flex-end;
-    }
+  .catalog-extra__promo-link {
+    justify-content: flex-end;
+    padding-right: 124px;
+  }
 
-    &__event {
-      text-align: left;
-    }
+  .catalog-extra__event {
+    text-align: left;
+    margin: auto 0;
+  }
 
-    &__event::before {
-      left: 77px;
-      top: 57px;
-      transform: translateX(0);
-    }
+  .catalog-extra__event::before {
+    left: 77px;
+    top: 57px;
+    transform: translateX(0);
+  }
 
-    &__term,
-    &__desc {
-      font-size: 16px;
-      line-height: 20px;
-    }
+  .catalog-extra__term,
+  .catalog-extra__desc {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .catalog-extra__desc {
+    margin-left: 49px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-extra {
     margin-bottom: 86px;
+  }
 
-    &__title {
-      margin-top: 75px;
-      margin-bottom: 81px;
+  .catalog-extra__title {
+    margin-top: 75px;
+    margin-bottom: 81px;
+  }
+
+  .catalog-extra__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .catalog-extra__list {
+    width: 896px;
+    margin-bottom: 0;
+    border-right: none;
+    border-left: none;
+  }
+
+  .catalog-extra__item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 0 17px;
+  }
+
+  .catalog-extra__product {
+    margin-right: auto;
+  }
+
+  .catalog-extra__parameters {
+    width: 288px;
+    margin-right: 32px;
+  }
+
+  .catalog-extra__promo {
+    width: auto;
+    height: inherit;
+    margin: 0;
+    align-items: flex-end;
+    background-image: url("../img/desktop/catalog/washing-cat-desctop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/tablet/catalog/washing-cat-desctop@2.jpg");
     }
+  }
 
-    &__wrap {
-      display: flex;
-      justify-content: space-between;
-    }
+  .catalog-extra__order {
+    width: 244px;
+  }
 
-    &__list {
-      width: 896px;
-      margin-bottom: 0;
-      border-right: none;
-      border-left: none;
-    }
+  .catalog-extra__term,
+  .catalog-extra__desc {
+    font-size: 16px;
+    line-height: 20px;
+  }
 
-    &__item {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 15px 0 17px;
-    }
+  .catalog-extra__promo-link {
+    padding: 40px;
+  }
 
-    &__product {
-      margin-right: auto;
-    }
-
-    &__parameters {
-      width: 288px;
-      margin-right: 32px;
-    }
-
-    &__promo {
-      width: auto;
-      height: inherit;
-      margin: 0;
-      align-items: flex-end;
-      background-image: url("../img/desktop/catalog/washing-cat-desctop.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/tablet/catalog/washing-cat-desctop@2.jpg");
-      }
-    }
-
-    &__order {
-      width: 244px;
-    }
-
-    &__term,
-    &__desc {
-      font-size: 16px;
-      line-height: 20px;
-    }
-
-    &__promo-link {
-      padding: 40px;
-    }
-
-    &__event {
-      text-align: center;
-    }
+  .catalog-extra__event {
+    text-align: center;
   }
 }

@@ -1,118 +1,129 @@
-.usage {
-  &__title {
-    margin: 0 0 40px 0;
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 40px;
-    color: #000000;
-  }
+.usage__title {
+  margin: 0 0 38px 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+}
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+.usage__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 19px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-  &__item {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
+.usage__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
-  &__item::before {
-    content: "";
-    flex-shrink: 0;
-    width: 60px;
-    height: 60px;
-    background-color: @base-green;
-    background-position: center;
-    background-size: auto;
-    background-repeat: no-repeat;
-  }
+.usage__item::before {
+  content: "";
+  flex-shrink: 0;
+  width: 61px;
+  height: 61px;
+  background-color: @base-green;
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
 
-  &__item--useful::before {
-    background-image: url("../img/icons/usage-leaf.svg");
-  }
+.usage__item--useful::before {
+  background-image: url("../img/icons/usage-leaf.svg");
+}
 
-  &__item--simple::before {
-    background-image: url("../img/icons/usage-tub.svg");
-  }
+.usage__item--simple::before {
+  background-image: url("../img/icons/usage-tub.svg");
+}
 
-  &__item--comfortable::before {
-    background-image: url("../img/icons/usage-eat.svg");
-  }
+.usage__item--comfortable::before {
+  background-image: url("../img/icons/usage-eat.svg");
+}
 
-  &__item--working::before {
-    background-image: url("../img/icons/usage-alarm.svg");
-  }
+.usage__item--working::before {
+  background-image: url("../img/icons/usage-alarm.svg");
+}
 
-  &__description {
-    margin: 0 0 0 30px;
-    font-family: "Arial", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: @special-grey-dark;
-  }
+.usage__description {
+  margin: 0 0 0 20px;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: @special-grey-dark;
 }
 
 @media (min-width: @tablet-width) {
-  .usage {
-    &__list {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      column-gap: 95px;
-      row-gap: 90px;
-    }
+  .usage__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 150px;
+    row-gap: 90px;
+  }
 
-    &__item {
-      flex-direction: column;
-      align-items: flex-start;
-      flex-shrink: 0;
-      width: 230px;
-      min-height: 227px;
-    }
+  .usage__item {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    width: 235px;
+    min-height: 227px;
+  }
 
-    &__item::after {
-      position: absolute;
-      top: -40px;
-      right: 0;
-      font-family: "Oswald", sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 280px;
-      line-height: 280px;
-      color: @base-gray;
-    }
+  .usage__item::before {
+    width: 80px;
+    height: 80px;
+  }
 
-    &__item--useful::after {
-      content: "1";
-    }
+  .usage__item::after {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    color: @base-gray;
+  }
 
-    &__item--simple::after {
-      content: "2";
-    }
+  .usage__item--useful::after {
+    content: "1";
+  }
 
-    &__item--comfortable::after {
-      content: "3";
-    }
+  .usage__item--simple::after {
+    content: "2";
+  }
 
-    &__item--working::after {
-      content: "4";
-    }
+  .usage__item--comfortable::after {
+    content: "3";
+  }
 
-    &__description {
-      z-index: 1;
-      margin-left: 0;
-      margin-top: 31px;
-      font-size: 16px;
-      line-height: 24px;
-    }
+  .usage__item--working::after {
+    content: "4";
+  }
+
+  .usage__description {
+    z-index: 1;
+    margin-left: 0;
+    margin-top: 31px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .usage__title {
+    margin-left: 7px;
+  }
+
+  .usage__list {
+    column-gap: 93px;
   }
 }
