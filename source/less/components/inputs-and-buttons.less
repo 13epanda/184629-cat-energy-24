@@ -249,51 +249,72 @@
 /* RANGE */
 
 .input-range {
-  //-webkit-appearance: none;
+  -webkit-appearance: none;
   margin: 17px 0;
+}
 
-  &::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 6px;
-    border-radius: 6px;
-    cursor: pointer;
-    background: #dcdcdc;
-    border: 1px solid @special-grey;
-    box-sizing: border-box;
-  }
+.input-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #dcdcdc;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+}
 
-  &::-webkit-slider-thumb {
-    height: 34px;
-    width: 34px;
-    margin-top: -15px;
-    border-radius: 17px;
-    background-color: @base-green;
-    cursor: pointer;
-    border: 13px solid #ffffff;
-    outline: 1px solid @special-grey;
-    //-webkit-appearance: none;
-  }
+.input-range::-webkit-slider-thumb {
+  height: 34px;
+  width: 34px;
+  margin-top: -15px;
+  border-radius: 17px;
+  background-color: @base-green;
+  cursor: pointer;
+  border: 13px solid #ffffff;
+  outline: 1px solid @special-grey;
+  -webkit-appearance: none;
+}
 
-  &::-moz-range-track {
-    width: 100%;
-    height: 6px;
-    border-radius: 6px;
-    cursor: pointer;
-    background: #dcdcdc;
-    border: 1px solid @special-grey;
-    box-sizing: border-box;
-  }
+.input-range::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #dcdcdc;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+}
 
-  &::-moz-range-thumb {
-    height: 34px;
-    width: 34px;
-    margin-top: -15px;
-    border-radius: 17px;
-    background-color: @base-green;
-    cursor: pointer;
-    border: 13px solid #ffffff;
-    outline: 1px solid @special-grey;
-  }
+.input-range::-moz-range-thumb {
+  height: 34px;
+  width: 34px;
+  margin-top: -15px;
+  border-radius: 17px;
+  background-color: @base-green;
+  cursor: pointer;
+  border: 13px solid #ffffff;
+  outline: 1px solid @special-grey;
+}
+
+.input-range::-ms-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #dcdcdc;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+}
+
+.input-range::-ms-thumb {
+  height: 34px;
+  width: 34px;
+  margin-top: -15px;
+  border-radius: 17px;
+  background-color: @base-green;
+  cursor: pointer;
+  border: 13px solid #ffffff;
+  outline: 1px solid @special-grey;
 }
 
 @media (min-width: @tablet-width) {
