@@ -249,11 +249,38 @@
 /* RANGE */
 
 .input-range {
-  -webkit-appearance: none;
+  position: relative;
   margin: 17px 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #dcdcdc;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+  //ругается stylelint
+  // -webkit-appearance: none;
 }
 
+.input-range__thumb {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 34px;
+  width: 34px;
+  margin-top: -15px;
+  box-sizing: border-box;
+  border-radius: 17px;
+  background-color: @base-green;
+  cursor: pointer;
+  border: 13px solid #ffffff;
+  outline: 1px solid @special-grey;
+}
+
+/* Стилизация для браузеров */
+/*
 .input-range::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
   width: 100%;
   height: 6px;
   border-radius: 6px;
@@ -264,6 +291,7 @@
 }
 
 .input-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
   height: 34px;
   width: 34px;
   margin-top: -15px;
@@ -272,7 +300,6 @@
   cursor: pointer;
   border: 13px solid #ffffff;
   outline: 1px solid @special-grey;
-  -webkit-appearance: none;
 }
 
 .input-range::-moz-range-track {
@@ -316,6 +343,7 @@
   border: 13px solid #ffffff;
   outline: 1px solid @special-grey;
 }
+ */
 
 @media (min-width: @tablet-width) {
   /* BUTTON */

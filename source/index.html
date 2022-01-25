@@ -69,7 +69,7 @@
 
             <source media="(min-width: 1200px)" srcset="img/desktop/main/index-can-desktop.png 1x, img/desktop/main/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/tablet/main/index-can-tablet.png 1x, img/tablet/main/index-can-tablet@2x.png 2x">
-            <img class="promo__img" src="img/mobile/index-can-mobile.png" srcset="img/mobile/index-can-mobile@2.png" width="280" height="270" alt="Cat Energy Pro: Курица">
+            <img class="promo__img" src="img/mobile/main/index-can-mobile.png" srcset="img/mobile/main/index-can-mobile@2.png" width="280" height="270" alt="Cat Energy Pro: Курица">
           </picture>
           <a class="promo__button button button-primary" href="form.html">
             <span>Подобрать программу</span>
@@ -143,8 +143,15 @@
             </ol>
             <div class="example__condition">
               <span class="example__after">Было</span>
+              <!--при возможности использования префиксов в стилях
               <input class="input-range example__range" type="range" id="condition" name="condition" min="0" max="100" value="50" step="50">
+              -->
+              <div class="input-range example__range">
+                <div class="input-range__thumb"></div>
+              </div>
+              <!--при использовании input
               <label class="visually-hidden" for="condition">Изменить состояние кота.</label>
+              -->
               <span class="example__before">Стало</span>
             </div>
           </div>
