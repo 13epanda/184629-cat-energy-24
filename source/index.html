@@ -17,43 +17,45 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/desktop/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.svg">
-          <img class="page-header__logo-img" src="img/mobile/logo-mobile.svg" width="34" height="38" alt="Логотип магазина.">
-        </picture>
-      </a>
-      <a class="page-header__logo-title">
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/tablet/logo-cat-energy.svg">
-          <img class="page-header__cat-energy" src="img/mobile/cat-energy-mobile.svg" width="101" height="18" alt="Cat energy.">
-        </picture>
-      </a>
-      <nav class="page-header__wrapper-nav page-header--closed">
-        <button class="page-header__toggle" type="button">
-          <span class="visually-hidden">Открыть меню.</span>
-        </button>
-        <div class="page-header__nav">
-          <ul class="page-header__list">
-            <li class="page-header__item">
-              <a class="page-header__link page-header__link--special page-header__link--special-active">
-                Главная
-              </a>
-            </li>
-            <li class="page-header__item">
-              <a class="page-header__link page-header__link--special" href="catalog.html">
-                Каталог продукции
-              </a>
-            </li>
-            <li class="page-header__item">
-              <a class="page-header__link page-header__link--special" href="form.html">
-                Подбор программы
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <section class="page-header__wrapper">
+        <a class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/desktop/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.svg">
+            <img class="page-header__logo-img" src="img/mobile/logo-mobile.svg" width="34" height="38" alt="Логотип магазина.">
+          </picture>
+        </a>
+        <a class="page-header__logo-title">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/tablet/logo-cat-energy.svg">
+            <img class="page-header__cat-energy" src="img/mobile/cat-energy-mobile.svg" width="101" height="18" alt="Cat energy.">
+          </picture>
+        </a>
+        <nav class="page-header__wrapper-nav page-header--closed">
+          <button class="page-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+          </button>
+          <div class="page-header__nav">
+            <ul class="page-header__list">
+              <li class="page-header__item">
+                <a class="page-header__link page-header__link--special page-header__link--special-active">
+                  Главная
+                </a>
+              </li>
+              <li class="page-header__item">
+                <a class="page-header__link page-header__link--special" href="catalog.html">
+                  Каталог продукции
+                </a>
+              </li>
+              <li class="page-header__item">
+                <a class="page-header__link page-header__link--special" href="form.html">
+                  Подбор программы
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
     </header>
     <main class="page-main">
       <header class="page-main__promo promo">
