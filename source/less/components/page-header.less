@@ -1,4 +1,13 @@
 .page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.page-header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,7 +92,7 @@
   display: block;
   padding-top: 22px;
   padding-bottom: 24px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -103,7 +112,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-header {
+  .page-header__wrapper {
     padding-top: 25px;
     padding-left: 10px;
     padding-bottom: 15px;
@@ -112,6 +121,11 @@
   .page-header__logo-title {
     margin-left: 12px;
     margin-right: auto;
+  }
+
+  .page-header__logo-img {
+    width: 61px;
+    height: 50px;
   }
 
   .page-header__cat-energy {
@@ -128,15 +142,21 @@
 
   .page-header--closed .page-header__nav {
     display: block;
+    margin-left: auto;
   }
 
   .page-header--opened .page-header__nav {
     position: inherit;
+    margin-left: auto;
+    width: 70%;
+    background-color: transparent;
   }
 
   .page-header__list {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     column-gap: 36px;
     width: auto;
     margin: 6px 10px 0 0;
@@ -147,8 +167,8 @@
   }
 
   .page-header__link {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
@@ -157,17 +177,26 @@
 
   .page-header__link--special-active,
   .page-header__link--active {
+    padding-bottom: 6px;
     border-bottom: 2px solid @base-green;
-    margin-bottom: 3px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
+    background-color: transparent;
+  }
+
+  .page-header__wrapper {
     width: 1220px;
     margin: 0 auto;
     padding-left: 17px;
     padding-top: 52px;
+  }
+
+  .page-header__logo-img {
+    width: 70px;
+    height: 60px;
   }
 
   .page-header__cat-energy {
@@ -178,16 +207,19 @@
   .page-header__list {
     column-gap: 33px;
     margin: 3px 2px 0 0;
+    max-width: 585px;
   }
 
   .page-header__link {
     font-size: 20px;
     line-height: 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
-  .page-header__link--active,
-  .page-header__link--special-active {
-    margin-bottom: 5px;
+  .page-header__link--special-active,
+  .page-header__link--active {
+    padding-bottom: 6px;
   }
 
   .page-header__link--special {

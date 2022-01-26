@@ -1,7 +1,7 @@
 .promo {
   position: relative;
   margin-bottom: 20px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   text-align: center;
   color: #ffffff;
@@ -13,14 +13,13 @@
   left: 0;
   width: 100%;
   height: 63%;
-  background-color: @base-green;
-  background-image: url("../img/mobile/index-background-mobile.jpg");
+  background-image: url("../img/mobile/main/index-background-mobile.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/mobile/index-background-mobile@2.jpg");
+    background-image: url("../img/mobile/main/index-background-mobile@2.jpg");
   }
 }
 
@@ -67,18 +66,20 @@
 
 @media (min-width: @tablet-width) {
   .promo {
+    height: 810px;
+    margin: auto;
     color: #000000;
   }
 
   .promo__bg {
     display: none;
+    bottom: 0;
   }
 
   .promo__wrapper {
-    position: relative;
-    margin-bottom: 527px;
+    position: unset;
     justify-items: flex-start;
-    padding-top: 47px;
+    padding-top: 0;
   }
 
   .promo__title {
@@ -91,7 +92,7 @@
   }
 
   .promo__slogan {
-    margin-bottom: 48px;
+    margin-bottom: 50px;
     margin-left: 90px;
     margin-right: 50px;
     font-size: 20px;
@@ -110,28 +111,36 @@
 
   .promo__picture {
     position: absolute;
-    top: 247px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
     order: 1;
   }
 
   .promo__img {
     min-height: 609px;
+    width: auto;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .promo {
+    display: flex;
+    height: 696px;
+  }
+
   .promo__wrapper {
     justify-content: left;
-    padding: 92px 0 54px;
-    margin-bottom: 215px;
+    align-content: center;
+    margin-top: 35px;
   }
 
   .promo__picture {
     width: auto;
     height: 500px;
     position: absolute;
-    top: 10px;
-    right: 210px;
+    bottom: 55px;
+    transform: translateX(-154px);
   }
 
   .promo__img {
@@ -143,14 +152,15 @@
   .promo__bg {
     display: block;
     position: absolute;
-    top: -131px;
+    top: 0;
+    right: 0;
     left: 50%;
-    width: 50vw;
-    height: 695px;
-    background-image: url("../img/desktop/index-background-desktop.jpg");
+    width: 50%;
+    height: 696px;
+    background-image: url("../img/desktop/main/index-background-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/desktop/index-background-desktop@2.jpg");
+      background-image: url("../img/desktop/main/index-background-desktop@2.jpg");
     }
   }
 

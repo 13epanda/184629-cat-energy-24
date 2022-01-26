@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/32.png">
+    <link rel="icon" href="img/favicons/32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
     <link rel="manifest" href="manifest.webmanifest">
@@ -14,43 +17,45 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <picture>
-          <source media="(min-width: 1200px)" width="70" height="60" srcset="img/desktop/logo-desktop.svg">
-          <source media="(min-width: 768px)" width="60" height="50" srcset="img/tablet/logo-tablet.svg">
-          <img src="img/mobile/logo-mobile.svg" width="34" height="38" alt="Логотип магазина.">
-        </picture>
-      </a>
-      <a class="page-header__logo-title">
-        <picture>
-          <source media="(min-width: 768px)" width="101" height="19" srcset="img/tablet/logo-cat-energy.svg">
-          <img class="page-header__cat-energy" src="img/mobile/cat-energy-mobile.svg" width="101" height="18" alt="Cat energy.">
-        </picture>
-      </a>
-      <nav class="page-header__wrapper-nav page-header--closed">
-        <button class="page-header__toggle" type="button">
-          <span class="visually-hidden">Открыть меню.</span>
-        </button>
-        <div class="page-header__nav">
-          <ul class="page-header__list">
-            <li class="page-header__item">
-              <a class="page-header__link page-header__link--special page-header__link--special-active">
-                Главная
-              </a>
-            </li>
-            <li class="page-header__item">
-              <a class="page-header__link page-header__link--special" href="catalog.html">
-                Каталог продукции
-              </a>
-            </li>
-            <li class="page-header__item">
-              <a class="page-header__link page-header__link--special" href="form.html">
-                Подбор программы
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <section class="page-header__wrapper">
+        <a class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/desktop/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.svg">
+            <img class="page-header__logo-img" src="img/mobile/logo-mobile.svg" width="34" height="38" alt="Логотип магазина.">
+          </picture>
+        </a>
+        <a class="page-header__logo-title">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/tablet/logo-cat-energy.svg">
+            <img class="page-header__cat-energy" src="img/mobile/cat-energy-mobile.svg" width="101" height="18" alt="Cat energy.">
+          </picture>
+        </a>
+        <nav class="page-header__wrapper-nav page-header--closed">
+          <button class="page-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+          </button>
+          <div class="page-header__nav">
+            <ul class="page-header__list">
+              <li class="page-header__item">
+                <a class="page-header__link page-header__link--special page-header__link--special-active">
+                  Главная
+                </a>
+              </li>
+              <li class="page-header__item">
+                <a class="page-header__link page-header__link--special" href="catalog.html">
+                  Каталог продукции
+                </a>
+              </li>
+              <li class="page-header__item">
+                <a class="page-header__link page-header__link--special" href="form.html">
+                  Подбор программы
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
     </header>
     <main class="page-main">
       <header class="page-main__promo promo">
@@ -64,7 +69,7 @@
 
             <source media="(min-width: 1200px)" srcset="img/desktop/main/index-can-desktop.png 1x, img/desktop/main/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/tablet/main/index-can-tablet.png 1x, img/tablet/main/index-can-tablet@2x.png 2x">
-            <img class="promo__img" src="img/mobile/index-can-mobile.png" srcset="img/mobile/index-can-mobile@2.png" width="100%" height="auto" alt="Cat Energy Pro: Курица">
+            <img class="promo__img" src="img/mobile/main/index-can-mobile.png" srcset="img/mobile/main/index-can-mobile@2.png" width="280" height="270" alt="Cat Energy Pro: Курица">
           </picture>
           <a class="promo__button button button-primary" href="form.html">
             <span>Подобрать программу</span>
@@ -116,13 +121,15 @@
             Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
           <dl class="example__list">
-            <div class="example__item">
-              <dt class="example__term">5 кг</dt>
-              <dd class="example__desc">Снижение веса</dd>
-            </div>
-            <div class="example__item">
-              <dt class="example__term">60 дней</dt>
-              <dd class="example__desc">Затрачено времени</dd>
+            <div class="example__consequence">
+              <div class="example__item">
+                <dt class="example__term">5 кг</dt>
+                <dd class="example__desc">Снижение веса</dd>
+              </div>
+              <div class="example__item">
+                <dt class="example__term">60 дней</dt>
+                <dd class="example__desc">Затрачено времени</dd>
+              </div>
             </div>
             <div class="example__item-important">
               <dt class="example__term-important">Затраты на питание:</dt>
@@ -136,8 +143,15 @@
             </ol>
             <div class="example__condition">
               <span class="example__after">Было</span>
+              <!--при возможности использования префиксов в стилях
               <input class="input-range example__range" type="range" id="condition" name="condition" min="0" max="100" value="50" step="50">
+              -->
+              <div class="input-range example__range">
+                <div class="input-range__thumb"></div>
+              </div>
+              <!--при использовании input
               <label class="visually-hidden" for="condition">Изменить состояние кота.</label>
+              -->
               <span class="example__before">Стало</span>
             </div>
           </div>
@@ -148,7 +162,7 @@
       <section class="page-footer__contacts contacts">
         <h2 class="visually-hidden">Наш адрес</h2>
         <div class="contacts__wrapper">
-          <div class="contacts__content">
+          <div class="contacts__content contacts__content--special">
             <p class="contacts__invitation">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
             <address class="contacts__address">
               <span>ул. Большая Конюшенная, д. 19/8</span>
@@ -201,9 +215,9 @@
         </div>
       </section>
     </footer>
-  </body>
 
-  <script src="js/header-nav.js" type="text/javascript"></script>
-  <script src="js/example-cats.js" type="text/javascript"></script>
-  <script src="js/map.js" type="text/javascript"></script>
+    <script src="js/header-nav.js" type="text/javascript"></script>
+    <script src="js/example-cats.js" type="text/javascript"></script>
+    <script src="js/map.js" type="text/javascript"></script>
+  </body>
 </html>

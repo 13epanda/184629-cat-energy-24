@@ -56,7 +56,7 @@
   height: 45px;
   font-size: 16px;
   line-height: 18px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: @special-grey-dark;
   border: none;
@@ -72,6 +72,7 @@
   right: 15px;
   width: 18px;
   height: 13px;
+  fill: none;
 }
 
 .input-text__phone {
@@ -84,20 +85,20 @@
   height: 20px;
 }
 
-.input-text__input:focus ~ &__mail path {
+.input-text__input:focus ~ .input-text__mail {
   stroke: @base-green;
 }
 
-.input-text__input:focus ~ &__phone g {
-  fill: @base-green;
+.input-text__input:focus ~ .input-text__phone {
+  stroke: @base-green;
 }
 
-.input-text__input:invalid ~ &__mail path {
-  stroke: @status-error;
-}
-
-.input-text__input:invalid ~ &__phone g {
+.input-text__input:invalid .input-text__mail {
   fill: @status-error;
+}
+
+.input-text__input:invalid ~ .input-text__phone {
+  stroke: @status-error;
 }
 
 .input-text__input:hover {
@@ -124,7 +125,7 @@
   min-height: 150px;
   padding: 10px 10px 16px 15px;
   font-size: 16px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   line-height: 18px;
   text-transform: uppercase;
   color: @special-grey-dark;
@@ -169,7 +170,7 @@
   box-sizing: border-box;
 }
 
-.input-checkbox__input:checked ~ &__mark::before {
+.input-checkbox__input:checked ~ .input-checkbox__mark::before {
   position: absolute;
   content: "";
   top: 50%;
@@ -183,6 +184,10 @@
 .input-checkbox__input:disabled,
 .input-checkbox__input:disabled ~ .input-checkbox__span {
   opacity: 0.3;
+}
+
+.input-checkbox__input:focus ~ .input-checkbox__span {
+  outline: 1px solid @special-grey-dark;
 }
 
 .input-checkbox__span {
@@ -244,52 +249,101 @@
 /* RANGE */
 
 .input-range {
-  //-webkit-appearance: none;
+  position: relative;
   margin: 17px 0;
-
-  &::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 6px;
-    border-radius: 6px;
-    cursor: pointer;
-    background: #dcdcdc;
-    border: 1px solid @special-grey;
-    box-sizing: border-box;
-  }
-
-  &::-webkit-slider-thumb {
-    height: 34px;
-    width: 34px;
-    margin-top: -15px;
-    border-radius: 17px;
-    background-color: @base-green;
-    cursor: pointer;
-    border: 13px solid #ffffff;
-    outline: 1px solid @special-grey;
-    //-webkit-appearance: none;
-  }
-
-  &::-moz-range-track {
-    width: 100%;
-    height: 6px;
-    border-radius: 6px;
-    cursor: pointer;
-    background: #dcdcdc;
-    border: 1px solid @special-grey;
-    box-sizing: border-box;
-  }
-
-  &::-moz-range-thumb {
-    height: 34px;
-    width: 34px;
-    margin-top: -15px;
-    border-radius: 17px;
-    background-color: @base-green;
-    cursor: pointer;
-    border: 13px solid #ffffff;
-    outline: 1px solid @special-grey;
-  }
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #dcdcdc;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+  //ругается stylelint
+  // -webkit-appearance: none;
 }
+
+.input-range__thumb {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 34px;
+  width: 34px;
+  margin-top: -15px;
+  box-sizing: border-box;
+  border-radius: 17px;
+  background-color: @base-green;
+  cursor: pointer;
+  border: 13px solid #ffffff;
+  outline: 1px solid @special-grey;
+}
+
+/* Стилизация для браузеров */
+/*
+.input-range::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #dcdcdc;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+}
+
+.input-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 34px;
+  width: 34px;
+  margin-top: -15px;
+  border-radius: 17px;
+  background-color: @base-green;
+  cursor: pointer;
+  border: 13px solid #ffffff;
+  outline: 1px solid @special-grey;
+}
+
+.input-range::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #dcdcdc;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+}
+
+.input-range::-moz-range-thumb {
+  height: 34px;
+  width: 34px;
+  margin-top: -15px;
+  border-radius: 17px;
+  background-color: @base-green;
+  cursor: pointer;
+  border: 13px solid #ffffff;
+  outline: 1px solid @special-grey;
+}
+
+.input-range::-ms-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #dcdcdc;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+}
+
+.input-range::-ms-thumb {
+  height: 34px;
+  width: 34px;
+  margin-top: -15px;
+  border-radius: 17px;
+  background-color: @base-green;
+  cursor: pointer;
+  border: 13px solid #ffffff;
+  outline: 1px solid @special-grey;
+}
+ */
 
 @media (min-width: @tablet-width) {
   /* BUTTON */

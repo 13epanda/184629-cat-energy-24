@@ -1,15 +1,33 @@
 .page-main {
-  .usage {
+  .page-main__promo {
+    margin-top: 64px;
+  }
+
+  .page-main__usage {
     margin-bottom: 49px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .page-main {
-    .usage {
+    .page-main__promo {
+      margin-top: 140px;
+    }
+
+    .page-main__usage {
+      position: relative;
       padding-bottom: 60px;
       margin-bottom: 17px;
-      border-bottom: 1px solid #ebebeb;
+    }
+
+    .page-main__usage::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -30px;
+      height: 1px;
+      width: 100vw;
+      background-color: @base-grey-2;
     }
 
     .usage__title {
@@ -22,7 +40,8 @@
 
 @media (min-width: @desktop-width) {
   .page-main {
-    .promo {
+    .page-main__promo {
+      margin-top: 0;
       margin-bottom: 82px;
     }
 
@@ -34,9 +53,13 @@
       margin-bottom: 73px;
     }
 
-    .usage {
+    .page-main__usage {
       padding-bottom: 0;
       margin-bottom: 40px;
+    }
+
+    .page-main__usage::before {
+      content: none;
     }
   }
 }

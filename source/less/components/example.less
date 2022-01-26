@@ -1,5 +1,5 @@
 .example {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #000000;
@@ -21,7 +21,7 @@
 
 .example__description {
   margin: 0;
-  font-family: "Arial", serif;
+  font-family: "Arial", "Tahoma", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: @special-grey-dark;
@@ -32,9 +32,15 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin: 20px 0 40px 0;
+}
+
+.example__consequence {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   row-gap: 9px;
   column-gap: 10px;
-  margin: 20px 0 40px 0;
 }
 
 .example__item {
@@ -58,7 +64,7 @@
   transform: translateY(-11px);
   margin: 0 auto;
   padding: 0 15px;
-  font-family: "Arial", serif;
+  font-family: "Arial", "Tahoma", sans-serif;
   font-size: 12px;
   line-height: 12px;
   color: @special-grey-dark;
@@ -185,10 +191,15 @@
   }
 
   .example__list {
-    justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: nowrap;
     column-gap: 42px;
     margin-bottom: 60px;
+  }
+
+  .example__consequence {
+    justify-content: flex-start;
+    column-gap: 42px;
   }
 
   .example__term {
@@ -321,7 +332,12 @@
 
   .example__list {
     row-gap: 38px;
+    flex-wrap: wrap;
     margin-bottom: 75px;
+  }
+
+  .example__consequence {
+    row-gap: 38px;
   }
 
   .example__item-important {
