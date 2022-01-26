@@ -73,6 +73,7 @@
   width: 18px;
   height: 13px;
   fill: none;
+  stroke: @special-dark-grey-2;
 }
 
 .input-text__phone {
@@ -250,12 +251,12 @@
 
 .input-range {
   position: relative;
-  margin: 17px 0;
-  width: 100%;
-  height: 6px;
+  margin: 17px 13px;
+  width: 86px;
+  height: 16px;
   border-radius: 6px;
   cursor: pointer;
-  background: #dcdcdc;
+  background: #ffffff;
   border: 1px solid @special-grey;
   box-sizing: border-box;
   //ругается stylelint
@@ -265,16 +266,14 @@
 .input-range__thumb {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  height: 34px;
-  width: 34px;
-  margin-top: -15px;
+  transform: translateX(-100%);
+  height: 6px;
+  width: 36px;
+  margin-top: 4px;
   box-sizing: border-box;
-  border-radius: 17px;
+  border-radius: 6px;
   background-color: @base-green;
   cursor: pointer;
-  border: 13px solid #ffffff;
-  outline: 1px solid @special-grey;
 }
 
 /* Стилизация для браузеров */
@@ -411,6 +410,25 @@
   .input-radio__input:checked ~ .input-radio__mark::before {
     width: 18px;
     height: 18px;
+  }
+
+  /* RANGE */
+  .input-range {
+    margin: 17px 0;
+    width: 100%;
+    height: 6px;
+    background: #dcdcdc;
+  }
+
+  .input-range__thumb {
+    transform: translateX(-50%);
+    height: 34px;
+    width: 34px;
+    margin-top: -15px;
+    border-radius: 17px;
+    background-color: @base-green;
+    border: 13px solid #ffffff;
+    outline: 1px solid @special-grey;
   }
 }
 
