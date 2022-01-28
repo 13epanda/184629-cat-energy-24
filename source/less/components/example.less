@@ -153,9 +153,14 @@
 
 .example__after,
 .example__before {
+  padding: 0;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 @media (min-width: @tablet-width) {
@@ -280,6 +285,17 @@
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted @special-grey;
+  }
+
+  .example__after:hover,
+  .example__before:hover {
+    border-bottom: 1px solid @special-grey;
+  }
+
+  .example__after:active,
+  .example__before:active {
+    padding-bottom: 1px;
+    border-bottom: none;
   }
 }
 

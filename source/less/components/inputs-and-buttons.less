@@ -424,6 +424,16 @@
     background-color: @base-green;
     border: 13px solid #ffffff;
     outline: 1px solid @special-grey;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+  }
+
+  .input-range__thumb:hover {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+  }
+
+  .input-range__thumb:active {
+    outline-color: @base-green;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
   }
 }
 
