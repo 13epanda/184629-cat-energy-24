@@ -31,7 +31,12 @@
             <img class="page-header__cat-energy" src="img/mobile/cat-energy-mobile.svg" width="101" height="18" alt="Cat energy.">
           </picture>
         </a>
-        <nav class="page-header__wrapper-nav page-header__wrapper-nav--closed">
+        <!--
+          При инициализации header-nav.js
+          добавляется класс page-header__wrapper-nav--closed
+          при клике на кнопку page-header__toggle класс меняется на page-header__wrapper-nav--opened
+        -->
+        <nav class="page-header__wrapper-nav">
           <button class="page-header__toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
