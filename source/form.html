@@ -62,11 +62,11 @@
         </nav>
       </section>
     </header>
-    <main class="page-form page-content">
+    <main class="page-form">
       <h1 class="page-form__title">Подбор программы</h1>
-      <p class="page-form__annotation">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="page-form__annotation page-content">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="page-form__wrapper" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="page-form__choice">
+        <fieldset class="page-form__choice page-content">
           <legend class="visually-hidden">Данные кота.</legend>
           <ul class="page-form__list page-form__line">
             <li class="page-form__item">
@@ -113,8 +113,12 @@
           </ul>
         </fieldset>
         <fieldset class="page-form__choice">
-          <legend class="page-form__subtitle">Контактные данные (владельца кота)</legend>
-          <ul class="page-form__list page-form__list-row">
+          <legend class="page-form__subtitle">
+            <span class="page-form__span">
+               Контактные данные (владельца кота)
+            </span>
+          </legend>
+          <ul class="page-form__list page-form__list-row page-content">
             <li class="page-form__item">
               <label class="page-form__input input-text">
                 <span class="input-text__span">E-mail:*</span>
@@ -136,15 +140,23 @@
           </ul>
         </fieldset>
         <fieldset class="page-form__choice">
-          <legend class="page-form__subtitle">Комментарий</legend>
-          <label class="page-form__input input-area">
+          <legend class="page-form__subtitle">
+            <span class="page-form__span">
+              Комментарий
+            </span>
+          </legend>
+          <label class="page-form__input input-area page-content">
             <span class="input-area__span visually-hidden">О жизни кота</span>
             <textarea class="input-area__input" name="comment" cols="40" rows="3" placeholder="Расскажите обо всех повадках кота" aria-label="Расскажите обо всех повадках кота."></textarea>
           </label>
         </fieldset>
         <fieldset class="page-form__choice">
-          <legend class="page-form__subtitle">Дополнительно</legend>
-          <ul class="page-form__list page-form__list-dop">
+          <legend class="page-form__subtitle">
+            <span class="page-form__span">
+               Дополнительно
+            </span>
+          </legend>
+          <ul class="page-form__list page-form__list-dop page-content">
             <li class="page-form__item page-form__item-dop">
               <label class="page-form__input input-checkbox">
                 <input class="input-checkbox__input" type="checkbox" name="additionally" value="sweetener" checked>
@@ -175,8 +187,8 @@
             </li>
           </ul>
         </fieldset>
-        <button class="page-form__button button button-primary" type="submit">отправить заявку</button>
-        <p class="page-form__hint">* — Обязательные поля</p>
+        <button class="page-form__button button button-primary page-content" type="submit">отправить заявку</button>
+        <p class="page-form__hint page-content">* — Обязательные поля</p>
       </form>
     </main>
     <footer class="page-footer">
