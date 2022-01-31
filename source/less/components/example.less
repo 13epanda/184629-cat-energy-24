@@ -9,7 +9,7 @@
 .example__wrapper {
   display: grid;
   padding-top: 25px;
-  padding-bottom: 40px;
+  padding-bottom: 41px;
 }
 
 .example__title {
@@ -32,15 +32,9 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 20px 0 40px 0;
-}
-
-.example__consequence {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   row-gap: 9px;
   column-gap: 10px;
+  margin: 20px 0 40px 0;
 }
 
 .example__item {
@@ -84,7 +78,7 @@
 }
 
 .example__desc-important {
-  margin-left: 0;
+  margin-left: 3px;
 }
 
 .example__term-important,
@@ -131,7 +125,7 @@
 
 .example__cat--after {
   right: 0;
-  width: 50%;
+  width: 0;
   background-image: url("../img/mobile/main/after-mobile.png");
   background-position: right;
 
@@ -142,7 +136,7 @@
 
 .example__cat--before {
   left: 0;
-  width: 50%;
+  width: 100%;
   background-image: url("../img/mobile/main/before-mobile.png");
   background-position: left;
 
@@ -163,6 +157,10 @@
   cursor: pointer;
 }
 
+.example__range {
+  margin: 5px 17px;
+}
+
 @media (min-width: @tablet-width) {
   .example {
     position: relative;
@@ -180,7 +178,7 @@
   }
 
   .example__wrapper {
-    padding-bottom: 55px;
+    padding-bottom: 58px;
   }
 
   .example__title {
@@ -190,21 +188,17 @@
   }
 
   .example__description {
-    margin-bottom: 33px;
+    margin-bottom: 35px;
+    padding-right: 10px;
     font-size: 16px;
     line-height: 24px;
   }
 
   .example__list {
     align-items: flex-start;
-    flex-wrap: nowrap;
     column-gap: 42px;
-    margin-bottom: 60px;
-  }
-
-  .example__consequence {
-    justify-content: flex-start;
-    column-gap: 42px;
+    row-gap: 42px;
+    margin-bottom: 73px;
   }
 
   .example__term {
@@ -253,10 +247,11 @@
 
   .example__cats {
     height: 511px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .example__cat--after {
+    width: 50%;
     background-image: url("../img/tablet/main/cat-skinny.png");
 
     @media (min-resolution: 2dppx) {
@@ -265,6 +260,7 @@
   }
 
   .example__cat--before {
+    width: 50%;
     background-image: url("../img/tablet/main/cat-fat.png");
 
     @media (min-resolution: 2dppx) {
@@ -302,12 +298,13 @@
 @media (min-width: @desktop-width) {
   .example {
     &::before {
-      height: 465px;
+      top: 178px;
+      height: auto;
     }
   }
 
   .example__wrapper {
-    column-gap: 193px;
+    column-gap: 175px;
     padding-left: 8px;
     padding-top: 0;
     padding-bottom: 0;
@@ -315,8 +312,8 @@
   }
 
   .example__title {
-    margin-bottom: 145px;
-    padding-top: 45px;
+    margin-bottom: 148px;
+    padding-top: 42px;
   }
 
   .example__description,
@@ -326,7 +323,7 @@
   }
 
   .example__description {
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 
   .example__desc {
@@ -349,12 +346,9 @@
 
   .example__list {
     row-gap: 38px;
-    flex-wrap: wrap;
+    column-gap: normal;
     margin-bottom: 75px;
-  }
-
-  .example__consequence {
-    row-gap: 38px;
+    width: 365px;
   }
 
   .example__item-important {
@@ -365,7 +359,12 @@
   }
 
   .example__cats {
-    margin-bottom: 25px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+  }
+
+  .example__cat--before {
+    top: -10px;
   }
 
   .example__after {
