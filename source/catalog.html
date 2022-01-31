@@ -62,9 +62,9 @@
         </nav>
       </section>
     </header>
-    <main class="page-catalog page-content">
-        <h1 class="page-catalog__title">Каталог продукции</h1>
-        <section class="page-catalog__catalog catalog">
+    <main class="page-catalog">
+        <h1 class="page-catalog__title page-content">Каталог продукции</h1>
+        <section class="page-catalog__catalog catalog page-content">
           <h2 class="visually-hidden">Основные товары</h2>
           <ul class="catalog__list">
             <li class="catalog__item">
@@ -229,8 +229,10 @@
           </ul>
         </section>
         <section class="page-catalog__catalog-extra catalog-extra">
-          <h2 class="catalog-extra__title">Дополнительные товары</h2>
-          <div class="catalog-extra__wrap">
+          <h2 class="catalog-extra__title">
+            <span class="catalog-extra__span">Дополнительные товары</span>
+          </h2>
+          <div class="catalog-extra__wrap page-content">
             <ul class="catalog-extra__list">
               <li class="catalog-extra__item">
                 <h3 class="catalog-extra__product">Сахарозаменитель</h3>
@@ -267,7 +269,7 @@
             </ul>
             <article class="catalog-extra__promo">
               <a class="catalog-extra__promo-link" href="#" aria-label="Заказать все дополнительные товары по акции и получить подарок.">
-                <p class="catalog-extra__event">Закажите все и получите чехол для кота в подарок!</p>
+                <p class="catalog-extra__event">Закажите все и&#160;получите чехол для кота в подарок!</p>
               </a>
             </article>
           </div>
