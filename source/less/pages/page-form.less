@@ -108,10 +108,15 @@
 
 @media (min-width: @tablet-width) {
   .page-form {
-    margin: 140px 70px 0;
+    margin-top: 140px;
+
+    .page-content {
+      margin-left: 70px;
+      margin-right: 70px;
+    }
 
     .page-form__title {
-      margin: 0 0 55px;
+      margin-bottom: 55px;
       padding: 0;
       font-size: 60px;
       line-height: 60px;
@@ -134,29 +139,28 @@
     }
 
     .page-form__subtitle {
-      padding-right: 40px;
       margin-bottom: 75px;
+    }
+
+    .page-form__subtitle::before {
+      top: 23px;
+    }
+
+    .page-form__span {
+      padding-right: 41px;
+      padding-left: 35px;
       max-width: none;
+      margin-left: 30px;
       font-size: 36px;
       line-height: 36px;
     }
 
-    .page-form__subtitle::before,
-    .page-form__subtitle::after {
-      top: 22px;
-    }
-
-    .page-form__subtitle::before {
-      position: absolute;
-      content: "";
-      width: 100vw;
-      height: 2px;
-      background-color: @base-green;
-      left: calc(-100vw - 40px);
-    }
-
     .page-form__list {
       row-gap: 20px;
+    }
+
+    .input-area__input {
+      margin-bottom: -10px;
     }
 
     .page-form__subline {
@@ -172,6 +176,7 @@
 
     .page-form__line {
       padding-bottom: 72px;
+      margin-left: 0;
     }
 
     .page-form__list-row {
@@ -183,19 +188,19 @@
       justify-content: space-between;
       flex-wrap: wrap;
       row-gap: 26px;
-      width: 100%;
+      width: calc(100% - 170px);
       margin-top: -21px;
     }
 
     .page-form__item-dop {
-      width: calc(50% - 30px);
+      width: 250px;
     }
 
     .page-form__button {
-      margin-top: 0;
-      margin-bottom: 72px;
+      margin-top: 2px;
+      margin-bottom: 39px;
       margin-right: 61px;
-      padding: 16px 26px;
+      padding: 17px 26px;
       width: 282px;
       font-size: 20px;
       box-sizing: border-box;
@@ -203,8 +208,10 @@
 
     .page-form__hint {
       display: inline-block;
-      margin-top: -11px;
-      margin-bottom: 0;
+      position: relative;
+      top: -7px;
+      left: -2px;
+      margin: 0;
       font-size: 16px;
     }
   }
