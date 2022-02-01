@@ -5,7 +5,7 @@ ymaps.ready(init);
 function init() {
   // Создание карты.
   // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/map-docpage/
-  var myMap = new ymaps.Map("map", {
+  var myMap = new ymaps.Map('map', {
     // Координаты центра карты.
     // Порядок по умолчнию: «широта, долгота».
     center: [59.938635, 30.323118],

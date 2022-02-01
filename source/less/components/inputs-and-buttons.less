@@ -1,6 +1,7 @@
 /* BUTTON */
 .button-primary {
-  padding: 11px 44px 9px;
+  padding: 11px 44px 10px;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -40,7 +41,7 @@
 }
 
 .input-text__span {
-  margin-right: 15px;
+  margin-right: 13px;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -53,7 +54,7 @@
   flex-grow: 1;
   padding: 14px 51px 14px 15px;
   width: calc(100% - 20px);
-  height: 45px;
+  height: 43px;
   font-size: 16px;
   line-height: 18px;
   font-family: "Oswald", "Arial", sans-serif;
@@ -251,7 +252,6 @@
 
 .input-range {
   position: relative;
-  margin: 17px 13px;
   width: 86px;
   height: 16px;
   border-radius: 6px;
@@ -274,6 +274,7 @@
   border-radius: 6px;
   background-color: @base-green;
   cursor: pointer;
+  border: none;
 }
 
 /* Стилизация для браузеров */
@@ -364,7 +365,8 @@
 
   /* AREA */
   .input-area__input {
-    min-height: 165px;
+    padding-left: 17px;
+    min-height: 175px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -420,15 +422,35 @@
     height: 34px;
     width: 34px;
     margin-top: -15px;
+    padding: 4px;
     border-radius: 17px;
     background-color: @base-green;
     border: 13px solid #ffffff;
     outline: 1px solid @special-grey;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+  }
+
+  .input-range__thumb:hover {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+  }
+
+  .input-range__thumb:active {
+    outline-color: @base-green;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
   }
 }
 
 @media (min-width: @desktop-width) {
   .input-area__input {
     min-height: 175px;
+    padding-left: 27px;
+  }
+
+  .input-text__mail {
+    right: 20px;
+  }
+
+  .input-text__phone {
+    right: 18px;
   }
 }

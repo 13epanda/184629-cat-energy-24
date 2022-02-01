@@ -1,5 +1,5 @@
 .page-header {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 3;
@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding-bottom: 10px;
   padding-top: 12px;
   margin-left: 20px;
@@ -34,9 +35,31 @@
 .page-header__wrapper-nav {
   display: flex;
   height: auto;
+  width: 100vw;
+  margin: 11px -20px 0;
 }
 
 .page-header__toggle {
+  display: none;
+}
+
+.page-header__nav {
+  width: 100%;
+}
+
+.page-header__wrapper-nav--closed,
+.page-header__wrapper-nav--opened {
+  width: auto;
+  margin: 0;
+}
+
+.page-header__wrapper-nav--closed {
+  margin-top: -3px;
+}
+
+.page-header__wrapper-nav--closed .page-header__toggle,
+.page-header__wrapper-nav--opened .page-header__toggle {
+  display: block;
   top: 0;
   right: 0;
   width: 24px;
@@ -48,23 +71,19 @@
   border: none;
 }
 
-.page-header--closed {
-  margin-top: -3px;
-}
-
-.page-header--closed .page-header__toggle {
+.page-header__wrapper-nav--closed .page-header__toggle {
   background-image: url("../img/icons/burger.svg");
 }
 
-.page-header--opened .page-header__toggle {
+.page-header__wrapper-nav--opened .page-header__toggle {
   background-image: url("../img/icons/close.svg");
 }
 
-.page-header--closed .page-header__nav {
+.page-header__wrapper-nav--closed .page-header__nav {
   display: none;
 }
 
-.page-header--opened .page-header__nav {
+.page-header__wrapper-nav--opened .page-header__nav {
   position: absolute;
   display: flex;
   top: 62px;
@@ -112,6 +131,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-header {
+    position: absolute;
+  }
+
   .page-header__wrapper {
     padding-top: 25px;
     padding-left: 10px;
@@ -132,20 +155,21 @@
     margin-top: 8px;
   }
 
-  .page-header__toggle {
+  .page-header__wrapper-nav--closed .page-header__toggle,
+  .page-header__wrapper-nav--opened .page-header__toggle {
     display: none;
   }
 
-  .page-header--closed {
+  .page-header__wrapper-nav--closed {
     margin-top: 0;
   }
 
-  .page-header--closed .page-header__nav {
+  .page-header__wrapper-nav--closed .page-header__nav {
     display: block;
     margin-left: auto;
   }
 
-  .page-header--opened .page-header__nav {
+  .page-header__wrapper-nav--opened .page-header__nav {
     position: inherit;
     margin-left: auto;
     width: 70%;

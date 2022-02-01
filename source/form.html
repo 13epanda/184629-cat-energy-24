@@ -18,32 +18,37 @@
   <body>
     <header class="page-header">
       <section class="page-header__wrapper">
-        <a class="page-header__logo" href="index.html">
+        <a class="page-header__logo" href="index.html" aria-label="Перейти на главную страницу магазина.">
           <picture>
             <source media="(min-width: 1200px)" srcset="img/desktop/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.svg">
             <img class="page-header__logo-img" src="img/mobile/logo-mobile.svg" width="34" height="38" alt="Логотип магазина.">
           </picture>
         </a>
-        <a class="page-header__logo-title" href="index.html">
+        <a class="page-header__logo-title" href="index.html" aria-label="Перейти на главную страницу магазина.">
           <picture>
             <source media="(min-width: 768px)" srcset="img/tablet/logo-cat-energy.svg">
             <img class="page-header__cat-energy" src="img/mobile/cat-energy-mobile.svg" width="101" height="18" alt="Cat energy.">
           </picture>
         </a>
-        <nav class="page-header__wrapper-nav page-header--closed">
+        <!--
+          При инициализации header-nav.js
+          добавляется класс page-header__wrapper-nav--closed
+          при клике на кнопку page-header__toggle класс меняется на page-header__wrapper-nav--opened
+        -->
+        <nav class="page-header__wrapper-nav">
           <button class="page-header__toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
           <div class="page-header__nav">
             <ul class="page-header__list">
               <li class="page-header__item">
-                <a class="page-header__link" href="index.html">
+                <a class="page-header__link" href="index.html" aria-label="Перейти на главную страницу магазина.">
                   Главная
                 </a>
               </li>
               <li class="page-header__item">
-                <a class="page-header__link" href="catalog.html">
+                <a class="page-header__link" href="catalog.html" aria-label="Перейти на страницу каталога.">
                   Каталог продукции
                 </a>
               </li>
@@ -57,11 +62,13 @@
         </nav>
       </section>
     </header>
-    <main class="page-form page-content">
-      <h1 class="page-form__title">Подбор программы</h1>
-      <p class="page-form__annotation">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <main class="page-form">
+      <div class="page-content">
+        <h1 class="page-form__title">Подбор программы</h1>
+        <p class="page-form__annotation">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      </div>
       <form class="page-form__wrapper" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="page-form__choice">
+        <fieldset class="page-form__choice page-content">
           <legend class="visually-hidden">Данные кота.</legend>
           <ul class="page-form__list page-form__line">
             <li class="page-form__item">
@@ -108,8 +115,10 @@
           </ul>
         </fieldset>
         <fieldset class="page-form__choice">
-          <legend class="page-form__subtitle">Контактные данные (владельца кота)</legend>
-          <ul class="page-form__list page-form__list-row">
+          <legend class="page-form__subtitle">
+            <span class="page-form__span">Контактные данные (владельца кота)</span>
+          </legend>
+          <ul class="page-form__list page-form__list-row page-content">
             <li class="page-form__item">
               <label class="page-form__input input-text">
                 <span class="input-text__span">E-mail:*</span>
@@ -131,15 +140,19 @@
           </ul>
         </fieldset>
         <fieldset class="page-form__choice">
-          <legend class="page-form__subtitle">Комментарий</legend>
-          <label class="page-form__input input-area">
+          <legend class="page-form__subtitle">
+            <span class="page-form__span">Комментарий</span>
+          </legend>
+          <label class="page-form__input input-area page-content">
             <span class="input-area__span visually-hidden">О жизни кота</span>
-            <textarea class="input-area__input" name="comment" cols="40" rows="3" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="input-area__input" name="comment" cols="40" rows="3" placeholder="Расскажите обо всех повадках кота" aria-label="Расскажите обо всех повадках кота."></textarea>
           </label>
         </fieldset>
         <fieldset class="page-form__choice">
-          <legend class="page-form__subtitle">Дополнительно</legend>
-          <ul class="page-form__list page-form__list-dop">
+          <legend class="page-form__subtitle">
+            <span class="page-form__span">Дополнительно</span>
+          </legend>
+          <ul class="page-form__list page-form__list-dop page-content">
             <li class="page-form__item page-form__item-dop">
               <label class="page-form__input input-checkbox">
                 <input class="input-checkbox__input" type="checkbox" name="additionally" value="sweetener" checked>
@@ -170,8 +183,10 @@
             </li>
           </ul>
         </fieldset>
-        <button class="page-form__button button button-primary" type="submit">отправить заявку</button>
-        <p class="page-form__hint">* — Обязательные поля</p>
+        <div class="page-content">
+          <button class="page-form__button button button-primary" type="submit">отправить заявку</button>
+          <p class="page-form__hint">* — Обязательные поля</p>
+        </div>
       </form>
     </main>
     <footer class="page-footer">
@@ -198,21 +213,21 @@
         </a>
         <ul class="page-footer__social">
           <li class="page-footer__item">
-            <a class="page-footer__link" href="https://vk.com/htmlacademy">
+            <a class="page-footer__link" href="https://vk.com/htmlacademy" aria-label="Перейти на нашу страницу в Вконтакте.">
               <svg class="page-footer__vkontakte" width="23" height="16" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="page-footer__item">
-            <a class="page-footer__link" href="https://www.instagram.com/htmlacademy">
+            <a class="page-footer__link" href="https://www.instagram.com/htmlacademy" aria-label="Перейти на нашу страницу в Инстаграме.">
               <svg class="page-footer__instagram" width="16" height="16" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="page-footer__item">
-            <a class="page-footer__link" href="https://www.facebook.com/htmlacademy">
+            <a class="page-footer__link" href="https://www.facebook.com/htmlacademy" aria-label="Перейти на нашу страницу в Фейсбуке.">
               <svg class="page-footer__facebook" width="22" height="22" aria-hidden="true" focusable="false" fill="none">
                 <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
@@ -220,10 +235,10 @@
           </li>
         </ul>
         <div class="page-footer__copyright">
-          <a class="page-footer__academy-text" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="page-footer__academy-text" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу HTML-academy и научится верстать так же сайты.">
             <span>HTML Academy</span>
           </a>
-          <a class="page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу HTML-academy и научится верстать так же сайты.">
             <svg class="page-footer__logo-html" width="27" height="34">
               <use xlink:href="img/sprite.svg#logo-html-academy"></use>
             </svg>
