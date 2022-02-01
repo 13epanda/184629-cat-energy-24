@@ -18,4 +18,3 @@ range.addEventListener('input', function(e) {
   catBefore.style.width = (100 - value) + '%';
   catAfter.style.width = value + '%';
 })
-
