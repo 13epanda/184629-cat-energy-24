@@ -101,18 +101,20 @@
 
   .page-footer__logo-title {
     margin-right: 35px;
+    margin-left: 8px;
   }
 
   .page-footer__social {
-    margin: 0;
-    padding: 0;
-    border: none;
-    column-gap: 23px;
+    margin: -8px 0 0 0;
+    padding: 0 12px 0 0;
+    border: 0;
+    column-gap: 25px;
+    align-items: flex-start;
   }
 
   .page-footer__vkontakte {
-    width: 29px;
-    height: 17px;
+    width: 30px;
+    height: 22px;
   }
 
   .page-footer__instagram {
@@ -121,15 +123,15 @@
   }
 
   .page-footer__facebook {
-    width: 28px;
-    height: 33px;
+    width: 23px;
+    height: 23px;
   }
 
   .page-footer__copyright {
     align-self: auto;
     flex-shrink: 0;
     width: auto;
-    margin-top: -5px;
+    margin-top: -4px;
   }
 
   .page-footer__academy-logo {
@@ -139,7 +141,9 @@
 
 @media (min-width: @desktop-width) {
   .page-footer__wrapper {
-    padding-top: 59px;
-    padding-left: 15px;
+    padding-top: 62px;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 0;
   }
 }
