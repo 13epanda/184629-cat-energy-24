@@ -1,5 +1,10 @@
-.catalog-extra__title {
+.catalog-extra__wrap-title {
   position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.catalog-extra__title {
   width: 100%;
   margin: 0;
   font-size: 24px;
@@ -8,7 +13,7 @@
   color: @special-dark-grey-2;
 }
 
-.catalog-extra__title::before {
+.catalog-extra__wrap-title::before {
   position: absolute;
   content: "";
   top: 50%;
@@ -174,6 +179,7 @@
     margin: 4px 0 0;
     font-size: 16px;
     line-height: 20px;
+    justify-content: flex-end;
   }
 
   .catalog-extra__promo {
@@ -194,11 +200,12 @@
   .catalog-extra__event {
     text-align: left;
     margin: auto 0;
+    padding-top: 5px;
   }
 
   .catalog-extra__event::before {
-    left: 77px;
-    top: 57px;
+    left: 79px;
+    top: 59px;
     transform: translateX(0);
   }
 
@@ -209,7 +216,13 @@
   }
 
   .catalog-extra__desc {
-    margin-left: 49px;
+    margin-left: 0;
+    min-width: 93px;
+    text-align: right;
+  }
+
+  .catalog-extra__term {
+    text-align: right;
   }
 }
 
@@ -218,19 +231,24 @@
     margin-bottom: 83px;
   }
 
-  .catalog-extra__title {
+  .catalog-extra__wrap-title {
     margin-top: 75px;
     margin-bottom: 81px;
   }
 
-  .catalog-extra__title::before {
+  .catalog-extra__wrap-title::before {
     transform: translateY(4px);
+  }
+
+  .catalog-extra__title {
+    width: 1285px;
+    margin: 0 auto;
   }
 
   .catalog-extra__span {
     padding-right: 35px;
     padding-left: 40px;
-    margin-left: 70px;
+    margin-left: 0;
   }
 
   .catalog-extra__wrap {
@@ -256,9 +274,11 @@
 
   .catalog-extra__product {
     margin-right: auto;
+    padding-left: 2px;
   }
 
   .catalog-extra__parameters {
+    justify-content: space-between;
     width: 286px;
     margin-right: 40px;
     margin-top: 8px;
